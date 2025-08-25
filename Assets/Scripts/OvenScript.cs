@@ -12,10 +12,12 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private CookingBarVertScript cookingBarVertScript;
     [SerializeField] private GameObject cookingBar;
     [SerializeField] private GameObject cookingBarVert;
+    private bool CanBake = true;
 
     void Start()
     {
         ovenOutline.SetActive(false);
+        EventManagerScript.instance.OnDoughChosen.AddListener(DoughChosen);
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
@@ -28,13 +30,20 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         ovenOutline.SetActive(false);
     }
 
+    void DoughChosen(int doughNum)
+    {
+        CanBake = true;
+    }
+
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
-        if (cookingBarVertScript.BarMoving == false)
+        if (cookingBarVertScript.BarMoving == false && CanBake == true)
         {
+            EventManagerScript.instance.BakeDough();
             cookingBar.SetActive(true);
             cookingBarVert.SetActive(true);
             ovenWithBiscuit.SetActive(true);
+            CanBake = false;
             cookingBarVertScript.StartCoroutine(cookingBarVertScript.StartBar());
         }
     }

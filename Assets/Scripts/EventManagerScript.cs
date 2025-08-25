@@ -1,0 +1,42 @@
+using System;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class EventManagerScript : MonoBehaviour
+{
+    public static EventManagerScript instance;
+
+    [Serializable]
+    public class IntEvent : UnityEvent<int> { }
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("More than one instance of EventManagerScript found.");
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
+    public EventManagerScript GetInstance()
+    {
+        return instance;
+    }
+
+    // When the player clicks on one of the three doughs
+    public IntEvent OnDoughChosen;
+    public void ChooseDoughType(int doughNum)
+    {
+        OnDoughChosen.Invoke(doughNum);
+    }
+
+    // When the player clicks on the oven to bake the dough
+    public event Action OnDoughBaked;
+    public void BakeDough()
+    {
+        OnDoughBaked.Invoke();
+    }
+}

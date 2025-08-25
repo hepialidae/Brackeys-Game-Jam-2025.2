@@ -30,10 +30,6 @@ public class CookingBarVertScript : MonoBehaviour
 
     void Update()
     {
-        if (BarMoving)
-        {
-            Debug.Log(gameObject.transform.localPosition.x);
-        }
         // checks if player clicks while bar is moving
         if (InputManagerScript.instance.GetLeftClickPerformed() && BarMoving)
         {
