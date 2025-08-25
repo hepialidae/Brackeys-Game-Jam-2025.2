@@ -7,6 +7,7 @@ public class NextButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     void Start()
     {
+        gameObject.SetActive(false);
         nextButtonOutline.SetActive(false);
     }
 

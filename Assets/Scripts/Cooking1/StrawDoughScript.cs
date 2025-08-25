@@ -16,18 +16,25 @@ public class StrawDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        strawDoughOutline.SetActive(true);
+        if (CanPlaceDough)
+        {
+            strawDoughOutline.SetActive(true);
+        }
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        strawDoughOutline.SetActive(false);
+        if (CanPlaceDough)
+        {
+            strawDoughOutline.SetActive(false);
+        }
     }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
         if (CanPlaceDough)
         {
+            strawDoughOutline.SetActive(false);
             EventManagerScript.instance.ChooseDoughType(1);
         }
     }

@@ -22,12 +22,18 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        ovenOutline.SetActive(true);
+        if (CanBake)
+        {
+            ovenOutline.SetActive(true);
+        }
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        ovenOutline.SetActive(false);
+        if (CanBake)
+        {
+            ovenOutline.SetActive(false);
+        }
     }
 
     void DoughChosen(int doughNum)
@@ -39,6 +45,7 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (cookingBarVertScript.BarMoving == false && CanBake == true)
         {
+            ovenOutline.SetActive(false);
             EventManagerScript.instance.BakeDough();
             cookingBar.SetActive(true);
             cookingBarVert.SetActive(true);

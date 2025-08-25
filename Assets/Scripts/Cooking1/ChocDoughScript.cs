@@ -16,18 +16,25 @@ public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        chocDoughOutline.SetActive(true);
+        if (CanPlaceDough)
+        {
+            chocDoughOutline.SetActive(true);
+        }
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        chocDoughOutline.SetActive(false);
+        if (CanPlaceDough)
+        {
+            chocDoughOutline.SetActive(false);
+        }
     }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
        if (CanPlaceDough)
         {
+            chocDoughOutline.SetActive(false);
             EventManagerScript.instance.ChooseDoughType(2);
         }
     }

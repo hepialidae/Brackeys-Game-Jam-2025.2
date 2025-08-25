@@ -16,12 +16,18 @@ public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        vaniDoughOutline.SetActive(true);
+        if (CanPlaceDough)
+        {
+            vaniDoughOutline.SetActive(true);
+        }
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        vaniDoughOutline.SetActive(false);
+        if (CanPlaceDough)
+        {
+            vaniDoughOutline.SetActive(false);
+        }
     }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
@@ -29,6 +35,7 @@ public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (CanPlaceDough)
         {
             EventManagerScript.instance.ChooseDoughType(0);
+            vaniDoughOutline.SetActive(false);
         }
     }
 

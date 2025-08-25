@@ -155,6 +155,7 @@ MonoBehaviour:
   secondsBeforeDisappear: 1.5
   cookingBar: {fileID: 1684884926}
   ovenWithBiscuit: {fileID: 325446291}
+  nextButton: {fileID: 1495846932}
   BarMoving: 0
 --- !u!50 &148020941
 Rigidbody2D:

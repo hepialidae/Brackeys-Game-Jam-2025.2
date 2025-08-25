@@ -8,6 +8,7 @@ public class CookingBarVertScript : MonoBehaviour
     [SerializeField] private float secondsBeforeDisappear = 1.5f;
     [SerializeField] private GameObject cookingBar;
     [SerializeField] GameObject ovenWithBiscuit;
+    [SerializeField] GameObject nextButton;
     public bool BarMoving = false;
     private Rigidbody2D _rb;
     private Animator _animator;
@@ -63,6 +64,7 @@ public class CookingBarVertScript : MonoBehaviour
         _rb.linearVelocityX = 0;
         _animator.SetBool("BarStopped", true);
         ovenWithBiscuit.SetActive(false);
+        nextButton.SetActive(true);
         yield return new WaitForSeconds(secondsBeforeDisappear);
         BarMoving = false;
         Vector3 pos = gameObject.transform.localPosition;
