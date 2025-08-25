@@ -2008,7 +2008,7 @@ GameObject:
   - component: {fileID: 1555260410}
   - component: {fileID: 1555260409}
   m_Layer: 0
-  m_Name: Cooking bg 1_0
+  m_Name: Cooking1Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2415,10 +2415,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3294ffdce95f047429080cfb62a6ba03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Doughs:
+  RawDoughs:
   - {fileID: 1265397819403566266, guid: a365cb7714cac48f09e0e528f2768c91, type: 3}
   - {fileID: 7032305583951712966, guid: 9dbb23f57fe5344d0a3e14d3ed3ec349, type: 3}
   - {fileID: 3962544443671664881, guid: b286bba7aac4b458f99e23f3dbf386c7, type: 3}
+  ChocDoughs: []
+  StrawDoughs: []
+  VaniDoughs: []
 --- !u!212 &1728871602
 SpriteRenderer:
   m_ObjectHideFlags: 0

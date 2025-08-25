@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class DoughSpawnScript : MonoBehaviour
 {
-    [SerializeField] private GameObject[] Doughs;
+    [SerializeField] private GameObject[] RawDoughs;
+    [SerializeField] private Sprite[] ChocDoughs;
+    [SerializeField] private Sprite[] StrawDoughs;
+    [SerializeField] private Sprite[] VaniDoughs;
+
     private SpriteRenderer _spriteRenderer;
     private int doughIndex = 99;
 
@@ -15,7 +19,7 @@ public class DoughSpawnScript : MonoBehaviour
 
     private void SpawnDough(int doughNum)
     {
-        _spriteRenderer.sprite = Doughs[doughNum].gameObject.GetComponent<SpriteRenderer>().sprite;
+        _spriteRenderer.sprite = RawDoughs[doughNum].gameObject.GetComponent<SpriteRenderer>().sprite;
         doughIndex = doughNum;
     }
 
