@@ -12,7 +12,7 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private CookingBarVertScript cookingBarVertScript;
     [SerializeField] private GameObject cookingBar;
     [SerializeField] private GameObject cookingBarVert;
-    private bool CanBake = true;
+    private bool CanBake = false;
 
     void Start()
     {
