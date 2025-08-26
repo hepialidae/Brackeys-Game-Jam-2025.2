@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class NextButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -27,6 +28,7 @@ public class NextButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         nextButtonOutline.SetActive(false);
         EventManagerScript.instance.NextPressed();
+        SceneManager.LoadScene("Cooking2");
     }
 
     private void Reset()
