@@ -63,6 +63,7 @@ public class DoughSpawnScript : MonoBehaviour
 
     private void NextPressed()
     {
+        Debug.Log(doughIndex + " " + cookScore);
         OrderTracker.instance.playerDoughIndex = doughIndex;
         OrderTracker.instance.playerCookScore = cookScore;
     }
