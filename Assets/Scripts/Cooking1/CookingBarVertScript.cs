@@ -42,7 +42,7 @@ public class CookingBarVertScript : MonoBehaviour
         }
 
         // checks if bar goes too far
-        if (gameObject.transform.localPosition.x >= 8.312)
+        if (gameObject.transform.localPosition.x >= 4.24 && BarMoving)
         {
             StopAllCoroutines();
             StartCoroutine(EndBar());
@@ -75,9 +75,9 @@ public class CookingBarVertScript : MonoBehaviour
         ovenWithBiscuit.SetActive(false);
         nextButton.SetActive(true);
 
-        yield return new WaitForSeconds(secondsBeforeDisappear);
-
         BarMoving = false;
+
+        yield return new WaitForSeconds(secondsBeforeDisappear);
 
         Vector3 pos = gameObject.transform.localPosition;
         pos.x = -4.1f;
