@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class NextButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class NextButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] private GameObject nextButtonOutline;
 
@@ -19,5 +19,10 @@ public class NextButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
         nextButtonOutline.SetActive(false);
+    }
+
+    void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
+    {
+        EventManagerScript.instance.NextPressed();
     }
 }

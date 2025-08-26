@@ -17,6 +17,7 @@ public class DoughSpawnScript : MonoBehaviour
         EventManagerScript.instance.OnDoughChosen.AddListener(SpawnDough);
         EventManagerScript.instance.OnDoughBaked += BakeDough;
         EventManagerScript.instance.OnBiscuitPlated.AddListener(PlateBiscuit);
+        EventManagerScript.instance.OnNextPressed += NextPressed;
     }
 
     private void SpawnDough(int doughNum)
@@ -58,5 +59,11 @@ public class DoughSpawnScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void NextPressed()
+    {
+        OrderTracker.instance.playerDoughIndex = doughIndex;
+        OrderTracker.instance.playerCookScore = cookScore;
     }
 }

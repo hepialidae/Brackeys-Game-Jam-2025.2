@@ -46,4 +46,11 @@ public class EventManagerScript : MonoBehaviour
     {
         OnBiscuitPlated.Invoke(barScore);
     }
+
+    // When the player presses the next button
+    public event Action OnNextPressed;
+    public void NextPressed()
+    {
+        OnNextPressed.Invoke();
+    }
 }
