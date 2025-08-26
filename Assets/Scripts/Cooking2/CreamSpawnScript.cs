@@ -13,10 +13,16 @@ public class CreamSpawnScript : MonoBehaviour
         _renderer.sprite = null;
 
         EventManagerScript_Cooking2.instance.OnCreamAdded.AddListener(SpawnCream);
+        EventManagerScript_Cooking2.instance.OnTrashPressed += Reset;
     }
 
     void SpawnCream(int creamIndex)
     {
         _renderer.sprite = creams[creamIndex];
+    }
+
+    void Reset()
+    {
+        _renderer.sprite = null;
     }
 }

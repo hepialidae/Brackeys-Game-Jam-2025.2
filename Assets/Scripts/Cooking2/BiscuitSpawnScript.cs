@@ -12,6 +12,8 @@ public class BiscuitSpawnScript : MonoBehaviour
     {
         _renderer = gameObject.GetComponent<SpriteRenderer>();
 
+        EventManagerScript_Cooking2.instance.OnTrashPressed += Reset;
+
         SpawnBiscuit();
     }
 
@@ -48,5 +50,10 @@ public class BiscuitSpawnScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    void Reset()
+    {
+        _renderer.sprite = null;
     }
 }

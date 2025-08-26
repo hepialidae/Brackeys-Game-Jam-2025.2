@@ -14,6 +14,7 @@ public class ToppingSpawn_NoCreamScript : MonoBehaviour
 
         EventManagerScript_Cooking2.instance.OnToppingAddedNoCream.AddListener(SpawnTopping);
         EventManagerScript_Cooking2.instance.OnCreamAdded.AddListener(ChangeToppingPos);
+        EventManagerScript_Cooking2.instance.OnTrashPressed += Reset;
     }
 
     private void SpawnTopping(int topping)
@@ -29,5 +30,10 @@ public class ToppingSpawn_NoCreamScript : MonoBehaviour
             EventManagerScript_Cooking2.instance.ToppingAddedCream(toppingIndex);
             _renderer.sprite = null;
         }
+    }
+
+    void Reset()
+    {
+        _renderer.sprite = null;
     }
 }

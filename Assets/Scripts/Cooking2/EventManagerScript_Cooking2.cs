@@ -46,4 +46,11 @@ public class EventManagerScript_Cooking2 : MonoBehaviour
     {
         OnToppingAddedNoCream.Invoke(toppingIndex);
     }
+
+    // Trash button
+    public event Action OnTrashPressed;
+    public void TrashPressed()
+    {
+        OnTrashPressed.Invoke();
+    }
 }
