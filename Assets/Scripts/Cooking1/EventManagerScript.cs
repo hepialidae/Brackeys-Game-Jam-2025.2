@@ -39,4 +39,11 @@ public class EventManagerScript : MonoBehaviour
     {
         OnDoughBaked.Invoke();
     }
+
+    // When the player takes the dough out of the oven
+    public IntEvent OnBiscuitPlated;
+    public void PlateBiscuit(int barScore)
+    {
+        OnBiscuitPlated.Invoke(barScore);
+    }
 }

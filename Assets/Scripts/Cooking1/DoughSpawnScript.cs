@@ -9,12 +9,14 @@ public class DoughSpawnScript : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private int doughIndex = 99;
+    private int cookScore = 99;
 
     void Start()
     {
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         EventManagerScript.instance.OnDoughChosen.AddListener(SpawnDough);
         EventManagerScript.instance.OnDoughBaked += BakeDough;
+        EventManagerScript.instance.OnBiscuitPlated.AddListener(PlateBiscuit);
     }
 
     private void SpawnDough(int doughNum)
@@ -26,5 +28,35 @@ public class DoughSpawnScript : MonoBehaviour
     private void BakeDough()
     {
         _spriteRenderer.sprite = null;
+    }
+
+    private void PlateBiscuit(int cookedLevel)
+    {
+        Debug.Log("CookedLevel: " + cookedLevel);
+        if (doughIndex == 0)
+        {
+            _spriteRenderer.sprite = VaniDoughs[cookedLevel];
+            cookScore = cookedLevel;
+        }
+        else
+        {
+            if (doughIndex == 1)
+            {
+                _spriteRenderer.sprite = StrawDoughs[cookedLevel];
+                cookScore = cookedLevel;
+            }
+            else
+            {
+                if (doughIndex == 2)
+                {
+                    _spriteRenderer.sprite = ChocDoughs[cookedLevel];
+                    cookScore = cookedLevel;
+                }
+                else
+                {
+                    Debug.LogError("PlateBiscuit() cannot plate. Dough Index: " + doughIndex + "; cookedLevel: " + cookedLevel);
+                }
+            }
+        }
     }
 }
