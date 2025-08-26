@@ -28,6 +28,8 @@ public class CookingBarVertScript : MonoBehaviour
         _rb.linearVelocityX = 0;
 
         _animator.SetBool("BarStopped", false);
+
+        EventManagerScript.instance.OnTrashPressed += Reset;
     }
 
     void Update()
@@ -127,5 +129,18 @@ public class CookingBarVertScript : MonoBehaviour
 
         Debug.LogError("Something's wrong with CalculateBarScore, this shouldn't be possible. X Position: " + xPosition);
         return 0;
+    }
+
+    private void Reset()
+    {
+        StopAllCoroutines();
+        BarMoving = false;
+
+        Vector3 pos = gameObject.transform.localPosition;
+        pos.x = -4.1f;
+        gameObject.transform.localPosition = pos;
+
+        cookingBar.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

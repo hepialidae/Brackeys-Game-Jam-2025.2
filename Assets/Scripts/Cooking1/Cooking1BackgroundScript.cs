@@ -8,8 +8,9 @@ public class Cooking1BackgroundScript : MonoBehaviour
     {
         _animator = gameObject.GetComponent<Animator>();
         _animator.SetBool("HasBurntBiscuit", false);
-        
+
         EventManagerScript.instance.OnBiscuitPlated.AddListener(BiscuitPlated);
+        EventManagerScript.instance.OnTrashPressed += Reset;
     }
 
     private void BiscuitPlated(int cookScore)
@@ -18,5 +19,10 @@ public class Cooking1BackgroundScript : MonoBehaviour
         {
             _animator.SetBool("HasBurntBiscuit", true);
         }
+    }
+
+    private void Reset()
+    {
+        _animator.SetBool("HasBurntBiscuit", false);
     }
 }

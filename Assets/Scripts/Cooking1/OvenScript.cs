@@ -18,6 +18,7 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         ovenOutline.SetActive(false);
         EventManagerScript.instance.OnDoughChosen.AddListener(DoughChosen);
+        EventManagerScript.instance.OnTrashPressed += Reset;
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
@@ -53,5 +54,11 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             CanBake = false;
             cookingBarVertScript.StartCoroutine(cookingBarVertScript.StartBar());
         }
+    }
+
+    private void Reset()
+    {
+        ovenOutline.SetActive(false);
+        CanBake = false;
     }
 }

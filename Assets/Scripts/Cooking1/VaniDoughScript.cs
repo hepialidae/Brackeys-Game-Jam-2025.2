@@ -12,6 +12,7 @@ public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
         vaniDoughOutline.SetActive(false);
         CanPlaceDough = true;
         EventManagerScript.instance.OnDoughChosen.AddListener(DoughPlaced);
+        EventManagerScript.instance.OnTrashPressed += Reset;
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
@@ -42,5 +43,10 @@ public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
     void DoughPlaced(int doughNum)
     {
         CanPlaceDough = false;
+    }
+
+    private void Reset()
+    {
+        CanPlaceDough = true;
     }
 }

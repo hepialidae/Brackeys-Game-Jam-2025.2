@@ -53,4 +53,11 @@ public class EventManagerScript : MonoBehaviour
     {
         OnNextPressed.Invoke();
     }
+
+    // When the player presses the trash button
+    public event Action OnTrashPressed;
+    public void TrashPressed()
+    {
+        OnTrashPressed.Invoke();
+    }
 }

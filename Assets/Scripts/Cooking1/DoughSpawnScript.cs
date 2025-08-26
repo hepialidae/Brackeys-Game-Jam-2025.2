@@ -18,6 +18,7 @@ public class DoughSpawnScript : MonoBehaviour
         EventManagerScript.instance.OnDoughBaked += BakeDough;
         EventManagerScript.instance.OnBiscuitPlated.AddListener(PlateBiscuit);
         EventManagerScript.instance.OnNextPressed += NextPressed;
+        EventManagerScript.instance.OnTrashPressed += Reset;
     }
 
     private void SpawnDough(int doughNum)
@@ -66,5 +67,12 @@ public class DoughSpawnScript : MonoBehaviour
         Debug.Log(doughIndex + " " + cookScore);
         OrderTracker.instance.playerDoughIndex = doughIndex;
         OrderTracker.instance.playerCookScore = cookScore;
+    }
+
+    private void Reset()
+    {
+        doughIndex = 99;
+        cookScore = 99;
+        _spriteRenderer.sprite = null;
     }
 }

@@ -12,6 +12,7 @@ public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
         chocDoughOutline.SetActive(false);
         CanPlaceDough = true;
         EventManagerScript.instance.OnDoughChosen.AddListener(DoughPlaced);
+        EventManagerScript.instance.OnTrashPressed += Reset;
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
@@ -32,7 +33,7 @@ public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
-       if (CanPlaceDough)
+        if (CanPlaceDough)
         {
             chocDoughOutline.SetActive(false);
             EventManagerScript.instance.ChooseDoughType(2);
@@ -42,5 +43,10 @@ public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
     void DoughPlaced(int doughNum)
     {
         CanPlaceDough = false;
+    }
+
+    private void Reset()
+    {
+        CanPlaceDough = true;
     }
 }

@@ -9,6 +9,8 @@ public class NextButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         gameObject.SetActive(false);
         nextButtonOutline.SetActive(false);
+
+        EventManagerScript.instance.OnTrashPressed += Reset;
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
@@ -23,6 +25,13 @@ public class NextButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
+        nextButtonOutline.SetActive(false);
         EventManagerScript.instance.NextPressed();
+    }
+
+    private void Reset()
+    {
+        nextButtonOutline.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
