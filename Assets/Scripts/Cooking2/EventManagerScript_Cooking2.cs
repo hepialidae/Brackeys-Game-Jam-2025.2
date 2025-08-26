@@ -32,4 +32,18 @@ public class EventManagerScript_Cooking2 : MonoBehaviour
     {
         OnCreamAdded.Invoke(creamIndex);
     }
+
+    // Player adds topping (cream on biscuit)
+    public IntEvent OnToppingAddedCream;
+    public void ToppingAddedCream(int toppingIndex)
+    {
+        OnToppingAddedCream.Invoke(toppingIndex);
+    }
+
+    // Player adds topping (no cream on biscuit)
+    public IntEvent OnToppingAddedNoCream;
+    public void ToppingAddedNoCream(int toppingIndex)
+    {
+        OnToppingAddedNoCream.Invoke(toppingIndex);
+    }
 }
