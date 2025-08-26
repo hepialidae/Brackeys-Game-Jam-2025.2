@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd1361e9c9384654894c3b6b56a625f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 1
+  moveSpeed: 1.1
   secondsBeforeDisappear: 1.5
   cookingBar: {fileID: 1684884926}
   ovenWithBiscuit: {fileID: 325446291}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 208433908}
   - component: {fileID: 208433909}
   m_Layer: 0
-  m_Name: OrderTracker
+  m_Name: '!!!ORDERTRACKER'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,12 +304,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208433907}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.57192, y: -0.20424, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 705914170}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &208433909
 MonoBehaviour:
@@ -921,7 +921,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -839164379025501650, guid: 749e9309215604e768d83f6fe7653a89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1214,7 +1214,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -7046833792434608102, guid: 3967c9daffd214da5b734c242f20c781, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1437,7 +1437,6 @@ Transform:
   - {fileID: 574000978}
   - {fileID: 259260632}
   - {fileID: 748616571}
-  - {fileID: 208433908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748616570
@@ -1760,37 +1759,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1495846937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1309995900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1309995901}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1309995901
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309995900}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.91, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1684884928}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495846932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +2056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555260410}
   - component: {fileID: 1555260409}
+  - component: {fileID: 1555260411}
   m_Layer: 0
   m_Name: Cooking1Background
   m_TagString: Untagged
@@ -2168,6 +2137,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1555260411
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555260408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7e9a29d6ba8ff4d388941d2ce91c2ede, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1557824063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,7 +2338,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -5481254918538448891, guid: fc4a20337ff924f52b048be8a2c4050a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2438,7 +2429,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1593328742384202917, guid: 7070823d142ba4e78a569a78765dbbfb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2464,7 +2455,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 148020943}
-  - {fileID: 1309995901}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1728871600
@@ -2477,7 +2467,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1728871603}
   - component: {fileID: 1728871602}
-  - component: {fileID: 1728871604}
   - component: {fileID: 1728871601}
   m_Layer: 0
   m_Name: DoughSpawnPoint
@@ -2507,19 +2496,19 @@ MonoBehaviour:
   - {fileID: -4084497655302582799, guid: d58aa9d9cc5724cf695d4c923f1fc1c0, type: 3}
   - {fileID: 6786030206267844862, guid: b7e907793533245f09b849baebd6f44c, type: 3}
   - {fileID: 8047614743159875652, guid: f728416ff64df430982a18ad948853c1, type: 3}
-  - {fileID: 8219948587067496920, guid: f3000812cf24b432a8959db9b47b12c0, type: 3}
+  - {fileID: 5096585877287107410, guid: 92af2961581e54a4fad6234e610002f9, type: 3}
   StrawDoughs:
   - {fileID: 8594054095546255293, guid: efa691e267dd84a29990af6f2a37b126, type: 3}
   - {fileID: 7839934547753305753, guid: a36a28d787c8c42839e4c0bf415b6156, type: 3}
   - {fileID: -2476622662979401657, guid: 1321854c3d8324b779e28117e2e2bf80, type: 3}
   - {fileID: 8884901938001490747, guid: f2ecd595d6fed45eb98be52b594c72e6, type: 3}
-  - {fileID: 8219948587067496920, guid: f3000812cf24b432a8959db9b47b12c0, type: 3}
+  - {fileID: 5096585877287107410, guid: 92af2961581e54a4fad6234e610002f9, type: 3}
   VaniDoughs:
   - {fileID: 295759196392032039, guid: fa78fc5e3128240898f39ab4cbae159b, type: 3}
   - {fileID: 9027705931253584573, guid: 1b9a158c0345c49acb65caefe190c886, type: 3}
   - {fileID: -93596312060238524, guid: 4dc2b7f6baf42490583e87f9ad60a63f, type: 3}
   - {fileID: 7619609336834441860, guid: cae66faa4d27d42a3b0f933dd770f178, type: 3}
-  - {fileID: 8219948587067496920, guid: f3000812cf24b432a8959db9b47b12c0, type: 3}
+  - {fileID: 5096585877287107410, guid: 92af2961581e54a4fad6234e610002f9, type: 3}
 --- !u!212 &1728871602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2593,28 +2582,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1728871604
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728871600}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1979975937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,7 +2801,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -7824718884333869516, guid: fd0f14ecbf4e0434c82ae19457d36c0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2870,6 +2837,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 705914170}
+  - {fileID: 208433908}
   - {fileID: 1555260410}
   - {fileID: 1092479575}
   - {fileID: 521633534}
