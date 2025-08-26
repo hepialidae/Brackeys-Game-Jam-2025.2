@@ -1287,7 +1287,7 @@ GameObject:
   - component: {fileID: 503254625}
   - component: {fileID: 503254624}
   m_Layer: 0
-  m_Name: DEBUG!!!VaniCream
+  m_Name: DEBUG!!!Cream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2877,7 +2877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1078184293
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3058,6 +3058,10 @@ MonoBehaviour:
   - {fileID: -7011882123662925407, guid: ce450cc35fc49492a9fc058e42ac919c, type: 3}
   - {fileID: 8644543632563167780, guid: c1324cca044734791a8f8a5766711373, type: 3}
   - {fileID: 6242353456496723587, guid: 19fe08c2082f5471b86ce4e447d36296, type: 3}
+  toppingPos:
+  - -1.74
+  - -1.66
+  - -1.92
 --- !u!1 &1529242372
 GameObject:
   m_ObjectHideFlags: 0
