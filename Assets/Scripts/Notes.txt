@@ -1,0 +1,6 @@
+!Delete/Set inactive all debug objects!
+
+Indexes:
+0 - Vanilla
+1 - Strawberry
+2 - Chocolate

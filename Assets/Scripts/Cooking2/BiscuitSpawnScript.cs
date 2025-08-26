@@ -31,7 +31,7 @@ public class BiscuitSpawnScript : MonoBehaviour
             {
                 if (OrderTracker.instance.playerDoughIndex == 2)
                 {
-                    _renderer.sprite = StrawDoughs[OrderTracker.instance.playerCookScore];
+                    _renderer.sprite = ChocDoughs[OrderTracker.instance.playerCookScore];
                 }
                 else
                 {
