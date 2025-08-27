@@ -1,6 +1,11 @@
 !Delete/Set inactive all debug objects!
 
-Indexes:
+Dough Indexes:
 0 - Vanilla
 1 - Strawberry
 2 - Chocolate
+
+Topping Indexes:
+0 - Strawberry
+1 - Cherry
+2 - Banana

@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: a652709493a864216a846b84fe0da671
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4440219180481840137
+    second: Sprinkles1_0
+  - first:
+      213: -3377068425679747906
+    second: Sprinkles1_1
+  - first:
+      213: -1864930150292320779
+    second: Sprinkles1_2
+  - first:
+      213: -6854718252097373452
+    second: Sprinkles1_3
+  - first:
+      213: -8549823919373338051
+    second: Sprinkles1_4
+  - first:
+      213: 7384688426224059499
+    second: Sprinkles1_5
+  - first:
+      213: -4900442278418613682
+    second: Sprinkles1_6
+  - first:
+      213: 3056707814473407422
+    second: Sprinkles1_7
+  - first:
+      213: -7620560158524950403
+    second: Sprinkles1_8
+  - first:
+      213: 940946700301289671
+    second: Sprinkles1_9
+  - first:
+      213: -8130770180968947057
+    second: Sprinkles1_10
+  - first:
+      213: 2730491010623595964
+    second: Sprinkles1_11
+  - first:
+      213: -848204777969592160
+    second: Sprinkles1_12
+  - first:
+      213: 2859348812935287087
+    second: Sprinkles1_13
+  - first:
+      213: 7850938322479425872
+    second: Sprinkles1_14
+  - first:
+      213: 3368965172463290938
+    second: Sprinkles1_15
+  - first:
+      213: -7052194342699173769
+    second: Sprinkles1_16
+  - first:
+      213: -19712138370724389
+    second: Sprinkles1_17
+  - first:
+      213: -7064810925607806123
+    second: Sprinkles1_18
+  - first:
+      213: -5662065255481495969
+    second: Sprinkles1_19
+  - first:
+      213: 8971276995196706383
+    second: Sprinkles1_20
+  - first:
+      213: -2464956454058917586
+    second: Sprinkles1_21
+  - first:
+      213: 2686452038414362801
+    second: Sprinkles1_22
+  - first:
+      213: 4864775852567597091
+    second: Sprinkles1_23
+  - first:
+      213: 1911670251822006698
+    second: Sprinkles1_24
+  - first:
+      213: -7580032155121039210
+    second: Sprinkles1_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprinkles1_0
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 559
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fbf08e3e2c2162c0800000000000000
+      internalID: -4440219180481840137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_1
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 579
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4cb29c82e3221d0800000000000000
+      internalID: -3377068425679747906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_2
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 559
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd09ecb8ef6e16e0800000000000000
+      internalID: -1864930150292320779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_3
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 569
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa795c41162fd0a0800000000000000
+      internalID: -6854718252097373452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_4
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 579
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a3d99b17ce85980800000000000000
+      internalID: -8549823919373338051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_5
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 589
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6406067ffeab7660800000000000000
+      internalID: 7384688426224059499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_6
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 569
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a7d8026b12efbb0800000000000000
+      internalID: -4900442278418613682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_7
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 559
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb19d7ef8b9b6a20800000000000000
+      internalID: 3056707814473407422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_8
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 539
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7830a949e45e3690800000000000000
+      internalID: -7620560158524950403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_9
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 539
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8c800e90aee0d00800000000000000
+      internalID: 940946700301289671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_10
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 539
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82e10d5993b92f80800000000000000
+      internalID: -8130770180968947057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_11
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 519
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb5ed9e7b17a4e520800000000000000
+      internalID: 2730491010623595964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_12
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 549
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a855589f329a34f0800000000000000
+      internalID: -848204777969592160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_13
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 519
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2151fb88927ea720800000000000000
+      internalID: 2859348812935287087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_14
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 509
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05923e8eec224fc60800000000000000
+      internalID: 7850938322479425872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_15
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 499
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a465d89f7f0ce20800000000000000
+      internalID: 3368965172463290938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_16
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 509
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77875640c92912e90800000000000000
+      internalID: -7052194342699173769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_17
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 519
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdd46a22ae7f9bff0800000000000000
+      internalID: -19712138370724389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_18
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 509
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b19d5e4efb4fd90800000000000000
+      internalID: -7064810925607806123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_19
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 489
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ea1f726ad4c61b0800000000000000
+      internalID: -5662065255481495969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_20
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 509
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e555035e0608c70800000000000000
+      internalID: 8971276995196706383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_21
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 509
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2103093a27bacdd0800000000000000
+      internalID: -2464956454058917586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_22
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 509
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8efcf35e1384520800000000000000
+      internalID: 2686452038414362801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_23
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 519
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320903cfcd7238340800000000000000
+      internalID: 4864775852567597091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_24
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 489
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1488f27fd978a10800000000000000
+      internalID: 1911670251822006698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles1_25
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 489
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698c8f76ae05ec690800000000000000
+      internalID: -7580032155121039210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprinkles1_0: -4440219180481840137
+      Sprinkles1_1: -3377068425679747906
+      Sprinkles1_10: -8130770180968947057
+      Sprinkles1_11: 2730491010623595964
+      Sprinkles1_12: -848204777969592160
+      Sprinkles1_13: 2859348812935287087
+      Sprinkles1_14: 7850938322479425872
+      Sprinkles1_15: 3368965172463290938
+      Sprinkles1_16: -7052194342699173769
+      Sprinkles1_17: -19712138370724389
+      Sprinkles1_18: -7064810925607806123
+      Sprinkles1_19: -5662065255481495969
+      Sprinkles1_2: -1864930150292320779
+      Sprinkles1_20: 8971276995196706383
+      Sprinkles1_21: -2464956454058917586
+      Sprinkles1_22: 2686452038414362801
+      Sprinkles1_23: 4864775852567597091
+      Sprinkles1_24: 1911670251822006698
+      Sprinkles1_25: -7580032155121039210
+      Sprinkles1_3: -6854718252097373452
+      Sprinkles1_4: -8549823919373338051
+      Sprinkles1_5: 7384688426224059499
+      Sprinkles1_6: -4900442278418613682
+      Sprinkles1_7: 3056707814473407422
+      Sprinkles1_8: -7620560158524950403
+      Sprinkles1_9: 940946700301289671
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
