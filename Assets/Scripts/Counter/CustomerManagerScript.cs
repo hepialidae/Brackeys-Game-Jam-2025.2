@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using System.Collections;
 
 public class CustomerManagerScript : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class CustomerManagerScript : MonoBehaviour
 
     void Start()
     {
-        SpawnCustomer();
+        StartCoroutine(Wait());
     }
 
     private void SpawnCustomer()
@@ -17,6 +18,13 @@ public class CustomerManagerScript : MonoBehaviour
         {
             randomCustomer = Random.Range(0, 5);
         }
+        Debug.Log("Spawning customer: " + randomCustomer);
         EventManagerScript_Counter.instance.SpawnCustomer(randomCustomer);
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return null;
+        SpawnCustomer();
     }
 }

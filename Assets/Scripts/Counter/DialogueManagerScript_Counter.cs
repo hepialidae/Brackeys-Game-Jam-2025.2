@@ -44,16 +44,17 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         DialogueIsPlaying = false;
-        DialogueCanvas.SetActive(false);
-        DialogueText.text = "";
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
         foreach (GameObject choice in choices)
         {
-            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>(true);
             index++;
         }
+
+        DialogueText.text = "";
+        DialogueCanvas.SetActive(false);
 
         if (inkJSON != null && knotName != null)
         {
@@ -78,10 +79,17 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON, string knotName)
     {
+        Debug.Log("EnterDialogueMode entered");
+        DialogueCanvas.SetActive(true);
+
         currentStory = new Story(inkJSON.text);
         DialogueIsPlaying = true;
-        DialogueCanvas.SetActive(true);
-        
+
+        if (knotName.Contains("Default") || knotName.Contains("Special"))
+        {
+            BindLeaveCounter();
+        }
+
         currentStory.ChoosePathString(knotName);
 
         ContinueStory();
@@ -89,17 +97,15 @@ public class DialogueManager : MonoBehaviour
 
     public void BindLeaveCounter()
     {
-        if (DialogueIsPlaying)
+        currentStory.BindExternalFunction("leaveCounter", () =>
         {
-            currentStory.BindExternalFunction("leaveCounter", () =>
-            {
-                SceneManager.LoadScene("Cooking1");
-            });
-        }
+            SceneManager.LoadScene("Cooking1");
+        });
     }
 
     private void ExitDialogueMode()
     {
+        Debug.Log("Dialogue mode exited");
         DialogueIsPlaying = false;
         DialogueCanvas.SetActive(false);
         DialogueText.text = "";

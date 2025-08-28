@@ -2076,6 +2076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d23806d3a54147d79eae190bf8c29d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  defaultOrders: {fileID: 4900000, guid: 670415feaf9914b50882bd822261eb8e, type: 3}
+  specialOrders: {fileID: 4900000, guid: e15a219987e254aa18a8886a7e75a945, type: 3}
   myCustomerIndex: 0
   mySprite: {fileID: 1036012652583364896, guid: 84f3cebd03e474e70aad6d9fa622d6f6, type: 3}
 --- !u!1 &2032722411
