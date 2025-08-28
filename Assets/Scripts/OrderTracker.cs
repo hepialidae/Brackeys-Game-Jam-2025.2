@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class OrderTracker : MonoBehaviour
 {
@@ -30,9 +32,20 @@ public class OrderTracker : MonoBehaviour
 
     private void Reset()
     {
+        customerIndex = 99;
+        orderDoughIndex = 99;
+        orderCreamIndex = 99;
+        orderToppingIndex = 99;
         playerDoughIndex = 99;
         playerCookScore = 99;
         playerCreamIndex = 99;
         playerToppingIndex = 99;
+    }
+
+    public void SetOrder(List<string> tags)
+    {
+        orderDoughIndex = int.Parse(tags[0]);
+        orderCreamIndex = int.Parse(tags[1]);
+        orderToppingIndex = int.Parse(tags[2]);
     }
 }

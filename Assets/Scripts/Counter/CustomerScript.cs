@@ -30,6 +30,7 @@ public class CustomerScript : MonoBehaviour
         if (customer == myCustomerIndex)
         {
             Appear();
+            OrderTracker.instance.customerIndex = customer;
 
             string orderString = GetOrder(GamestateManager.instance.day);
             if (orderString.Contains("Default"))

@@ -3,6 +3,7 @@ using TMPro;
 using Ink.Runtime;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Ink")]
     private Story currentStory;
+    private string[] tags;
 
     [Header("Debug/Testing")]
     [SerializeField] TextAsset inkJSON = null;
@@ -84,12 +86,14 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         DialogueIsPlaying = true;
 
+        currentStory.ChoosePathString(knotName);
+
         if (knotName.Contains("Default") || knotName.Contains("Special"))
         {
             BindLeaveCounter();
+            List<string> knotTags = currentStory.TagsForContentAtPath(knotName).ToList();
+            OrderTracker.instance.SetOrder(knotTags);
         }
-
-        currentStory.ChoosePathString(knotName);
 
         ContinueStory();
     }
@@ -98,6 +102,9 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory.BindExternalFunction("leaveCounter", () =>
         {
+            // Debug.Log($"OrderDoughIndex: {OrderTracker.instance.orderDoughIndex}");
+            // Debug.Log($"OrderCreamIndex: {OrderTracker.instance.orderCreamIndex}");
+            // Debug.Log($"OrderToppingIndex: {OrderTracker.instance.orderToppingIndex}");
             SceneManager.LoadScene("Cooking1");
         });
     }
