@@ -44,8 +44,8 @@ public class OrderTracker : MonoBehaviour
 
     public void SetOrder(List<string> tags)
     {
-        orderDoughIndex = int.Parse(tags[0]);
-        orderCreamIndex = int.Parse(tags[1]);
-        orderToppingIndex = int.Parse(tags[2]);
+        orderDoughIndex = int.Parse(tags[0].Trim());
+        orderCreamIndex = int.Parse(tags[1].Trim());
+        orderToppingIndex = int.Parse(tags[2].Trim());
     }
 }
