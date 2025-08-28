@@ -1,6 +1,6 @@
 !Delete/Set inactive all debug objects!
 
-Dough Indexes:
+Dough + Whipped Cream Indexes:
 0 - Vanilla
 1 - Strawberry
 2 - Chocolate
