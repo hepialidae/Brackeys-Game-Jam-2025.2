@@ -25,7 +25,6 @@ public class CustomerScript : MonoBehaviour
 
     private void Spawn(int customer)
     {
-        Debug.Log("Spawn recieved");
         StartCoroutine(Wait());
 
         if (customer == myCustomerIndex)
@@ -66,6 +65,7 @@ public class CustomerScript : MonoBehaviour
 
     private string GetOrder(int day)
     {
+        Debug.Log("Day is: " + day);
         switch (day)
         {
             case 1:
@@ -97,7 +97,7 @@ public class CustomerScript : MonoBehaviour
                 }
             case 4:
                 int orderNum3 = Random.Range(1, 4);
-                return $"Default{orderNum3}";
+                return $"Special{orderNum3}";
             default:
                 Debug.Log("Day is something other than 1-4. Day: " + day);
                 return "Default1";

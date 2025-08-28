@@ -30,7 +30,6 @@ public class EventManagerScript_Counter : MonoBehaviour
     public IntEvent OnCustomerSpawned;
     public void SpawnCustomer(int customer)
     {
-        Debug.Log("EventManager: Invoking OnCustomerSpawned with " + customer);
         OnCustomerSpawned.Invoke(customer);
     }
 }
