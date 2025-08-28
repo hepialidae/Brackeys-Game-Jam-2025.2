@@ -21,4 +21,12 @@ public class OrderTracker : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+    private void Reset()
+    {
+        playerDoughIndex = 99;
+        playerCookScore = 99;
+        playerCreamIndex = 99;
+        playerToppingIndex = 99;
+    }
 }

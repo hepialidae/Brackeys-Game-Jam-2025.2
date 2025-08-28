@@ -9,3 +9,9 @@ Topping Indexes:
 0 - Strawberry
 1 - Cherry
 2 - Banana
+3 - Chocolate
+4 - Caramel
+5 - Blueberry
+6 - Honey
+7 - Jam
+8 - Sprinkles

@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 3fa377b5d635e4f2c9eb7dc5f0aea423
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5923114121656503979
+    second: Sprinkle on cream_0
+  - first:
+      213: -6628733099574129018
+    second: Sprinkle on cream_1
+  - first:
+      213: -2439165182262656665
+    second: Sprinkle on cream_2
+  - first:
+      213: 6473124363097845060
+    second: Sprinkle on cream_3
+  - first:
+      213: -3423762118948045734
+    second: Sprinkle on cream_4
+  - first:
+      213: -3784749845682046617
+    second: Sprinkle on cream_5
+  - first:
+      213: 4402598179864760232
+    second: Sprinkle on cream_6
+  - first:
+      213: -5547679940627713095
+    second: Sprinkle on cream_7
+  - first:
+      213: 4864112831326672086
+    second: Sprinkle on cream_8
+  - first:
+      213: 2653827915833699480
+    second: Sprinkle on cream_9
+  - first:
+      213: 6510062876966115858
+    second: Sprinkle on cream_10
+  - first:
+      213: -8020291425156881039
+    second: Sprinkle on cream_11
+  - first:
+      213: -6848334228346726234
+    second: Sprinkle on cream_12
+  - first:
+      213: -8902508486288504428
+    second: Sprinkle on cream_13
+  - first:
+      213: -2691731825058609248
+    second: Sprinkle on cream_14
+  - first:
+      213: 2311700962277569744
+    second: Sprinkle on cream_15
+  - first:
+      213: -8187931621982690431
+    second: Sprinkle on cream_16
+  - first:
+      213: -8217872592588048820
+    second: Sprinkle on cream_17
+  - first:
+      213: -1101211526489693816
+    second: Sprinkle on cream_18
+  - first:
+      213: 115001262365185878
+    second: Sprinkle on cream_19
+  - first:
+      213: 2575120232717016447
+    second: Sprinkle on cream_20
+  - first:
+      213: 1130850405134653652
+    second: Sprinkle on cream_21
+  - first:
+      213: 5309982987156548710
+    second: Sprinkle on cream_22
+  - first:
+      213: 5323131226919131526
+    second: Sprinkle on cream_23
+  - first:
+      213: -354241769765635737
+    second: Sprinkle on cream_24
+  - first:
+      213: -8848453092678314468
+    second: Sprinkle on cream_25
+  - first:
+      213: 4553208071773951567
+    second: Sprinkle on cream_26
+  - first:
+      213: -9211593518166545121
+    second: Sprinkle on cream_27
+  - first:
+      213: -908466066020431486
+    second: Sprinkle on cream_28
+  - first:
+      213: -7615317714066865703
+    second: Sprinkle on cream_29
+  - first:
+      213: 8739604166335390167
+    second: Sprinkle on cream_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprinkle on cream_0
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 529
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae8f6169e0233250800000000000000
+      internalID: 5923114121656503979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_1
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 509
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e8201dd520204a0800000000000000
+      internalID: -6628733099574129018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_2
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 479
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761cbb2a038562ed0800000000000000
+      internalID: -2439165182262656665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_3
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 479
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44daf59ef4825d950800000000000000
+      internalID: 6473124363097845060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_4
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 489
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cb9a02e7a5c70d0800000000000000
+      internalID: -3423762118948045734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_5
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 459
+        width: 62
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769386c511ed97bc0800000000000000
+      internalID: -3784749845682046617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_6
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 449
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8afce97f7bb291d30800000000000000
+      internalID: 4402598179864760232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_7
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 449
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b33353ac7ea203b0800000000000000
+      internalID: -5547679940627713095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_8
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 459
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d455a259dcc08340800000000000000
+      internalID: 4864112831326672086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_9
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 449
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c684acd6a44d420800000000000000
+      internalID: 2653827915833699480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_10
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 459
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ad50fd1b3685a50800000000000000
+      internalID: 6510062876966115858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_11
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 459
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175a960317332b090800000000000000
+      internalID: -8020291425156881039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_12
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 449
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a89e38ad44d5f0a0800000000000000
+      internalID: -6848334228346726234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_13
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 429
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4998fd003bfe37480800000000000000
+      internalID: -8902508486288504428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_14
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 409
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a784c0aa2c05aad0800000000000000
+      internalID: -2691731825058609248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_15
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 409
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4bb7bf6cfc41020800000000000000
+      internalID: 2311700962277569744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_16
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 439
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183a882429f9e5e80800000000000000
+      internalID: -8187931621982690431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_17
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 419
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c46fe5dca6044fd80800000000000000
+      internalID: -8217872592588048820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_18
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 429
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881240d73f5b7b0f0800000000000000
+      internalID: -1101211526489693816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_19
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 409
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6579fffe901989100800000000000000
+      internalID: 115001262365185878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_20
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 399
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7dd405453aacb320800000000000000
+      internalID: 2575120232717016447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_21
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 409
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d85824b37691bf00800000000000000
+      internalID: 1130850405134653652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_22
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 379
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c65d0b469d0b940800000000000000
+      internalID: 5309982987156548710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_23
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 399
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689dd41d5af8fd940800000000000000
+      internalID: 5323131226919131526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_24
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 409
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769738cbcfa751bf0800000000000000
+      internalID: -354241769765635737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_25
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 379
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16d3371bcaf33580800000000000000
+      internalID: -8848453092678314468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_26
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 369
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46178a0e9e303f30800000000000000
+      internalID: 4553208071773951567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_27
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 389
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d64661088d92080800000000000000
+      internalID: -9211593518166545121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_28
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 359
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2890b5c1dea7463f0800000000000000
+      internalID: -908466066020431486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_29
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 369
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d10e4103e4f05690800000000000000
+      internalID: -7615317714066865703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkle on cream_30
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 369
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1e1f35faf494970800000000000000
+      internalID: 8739604166335390167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprinkle on cream_0: 5923114121656503979
+      Sprinkle on cream_1: -6628733099574129018
+      Sprinkle on cream_10: 6510062876966115858
+      Sprinkle on cream_11: -8020291425156881039
+      Sprinkle on cream_12: -6848334228346726234
+      Sprinkle on cream_13: -8902508486288504428
+      Sprinkle on cream_14: -2691731825058609248
+      Sprinkle on cream_15: 2311700962277569744
+      Sprinkle on cream_16: -8187931621982690431
+      Sprinkle on cream_17: -8217872592588048820
+      Sprinkle on cream_18: -1101211526489693816
+      Sprinkle on cream_19: 115001262365185878
+      Sprinkle on cream_2: -2439165182262656665
+      Sprinkle on cream_20: 2575120232717016447
+      Sprinkle on cream_21: 1130850405134653652
+      Sprinkle on cream_22: 5309982987156548710
+      Sprinkle on cream_23: 5323131226919131526
+      Sprinkle on cream_24: -354241769765635737
+      Sprinkle on cream_25: -8848453092678314468
+      Sprinkle on cream_26: 4553208071773951567
+      Sprinkle on cream_27: -9211593518166545121
+      Sprinkle on cream_28: -908466066020431486
+      Sprinkle on cream_29: -7615317714066865703
+      Sprinkle on cream_3: 6473124363097845060
+      Sprinkle on cream_30: 8739604166335390167
+      Sprinkle on cream_4: -3423762118948045734
+      Sprinkle on cream_5: -3784749845682046617
+      Sprinkle on cream_6: 4402598179864760232
+      Sprinkle on cream_7: -5547679940627713095
+      Sprinkle on cream_8: 4864112831326672086
+      Sprinkle on cream_9: 2653827915833699480
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
