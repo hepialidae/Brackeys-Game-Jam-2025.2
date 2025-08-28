@@ -1,19 +1,17 @@
 // Tag numbers are as follows: doughIndex, creamIndex, toppingIndex
--> Default1
-
 === Default1 ===
 # 2
 # 99
 # 99
 A chocolate biscuit, please!
 + [Okay.]
-    -> DONE
+    -> END
 + [What?]
     -> loop
 = loop
 A chocolate biscuit with nothing on it, please.
 + [Okay.]
-    -> DONE
+    -> END
 + [What?]
     -> loop
     
@@ -23,13 +21,13 @@ A chocolate biscuit with nothing on it, please.
 # 99
 I'd like a strawberry biscuit.
 + [Okay.]
-    -> DONE
+    -> END
 + [What?]
     -> loop
 = loop
 A strawberry biscuit with nothing on it.
 + [Okay.]
-    -> DONE
+    -> END
 + [What?]
     -> loop
 
@@ -39,28 +37,156 @@ A strawberry biscuit with nothing on it.
 # 99
 Hi! A vanilla biscuit.
 + [Okay.]
-    -> DONE
+    -> END
 + [What?]
     -> loop
 = loop
 Just a vanilla biscuit with nothing on it.
 + [Okay.]
-    -> DONE
+    -> END
 + [What?]
     -> loop
 
 === Default4 ===
-# 0
-# 99
-# 99
-I need sugar to work! All the chocolate you have, please!
+# 2
+# 2
+# 3
+All the chocolate you have, please!
 + [Okay.]
-    -> DONE
+    -> END
 + [What?]
     -> loop
 = loop
 A chocolate biscuit with chocolate whipped cream and a chocolate on top.
 + [Okay.]
-    -> DONE
+    -> END
++ [What?]
+    -> loop
+
+=== Default5 ===
+# 2
+# 0
+# 0
+Could I have a chocolate biscuit with vanilla whipped cream and a strawberry on top?
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+= loop
+A chocolate biscuit with vanilla whipped cream and a strawberry on top.
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+    
+=== Default6 ===
+# 1
+# 99
+# 8
+Hi! A strawberry biscuit with sprinkles!
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+= loop
+A strawberry biscuit with sprinkles on top.
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+
+=== Default7 ===
+# 0
+# 2
+# 6
+Hmmm...A white biscuit and brown whipped cream sounds good. Oh, and add some yellow syrup on top!
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+= loop
+A vanilla biscuit with chocolate whipped cream and honey.
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+
+=== Default8 ===
+# 1
+# 0
+# 7
+I want the strawberry biscuit with vanilla whipped cream. Drizzle some strawberry jam on it too!
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+= loop
+A strawberry biscuit with sprinkles on top.
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+
+=== Default9 ===
+# 2
+# 99
+# 1
+Everything's better with a cherry on top! A chocolate biscuit with a cherry, thank you!
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+= loop
+A chocolate biscuit with a cherry on top.
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+
+=== Default10 ===
+# 2
+# 2
+# 2
+I love banana-flavored chocolate milk, so I'd like a chocolate biscuit with chocolate whipped cream and a banana!
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+= loop
+A chocolate biscuit with chocolate whipped cream and a banana on top.
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+
+=== Default11 ===
+# 0
+# 0
+# 4
+A vanilla biscuit with vanilla whipped cream and caramel, please.
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+= loop
+A vanilla biscuit with vanilla whipped cream and a caramel on top.
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+
+=== Default12 ===
+# 1
+# 0
+# 5
+I'm craving some color today. A strawberry biscuit with vanilla whipped cream and blueberries will do!
++ [Okay.]
+    -> END
++ [What?]
+    -> loop
+= loop
+A strawberry biscuit with vanilla whipped cream and blueberries on top.
++ [Okay.]
+    -> END
 + [What?]
     -> loop
