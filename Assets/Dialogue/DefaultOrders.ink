@@ -1,16 +1,20 @@
 // Tag numbers are as follows: doughIndex, creamIndex, toppingIndex
+EXTERNAL leaveCounter()
+
 === Default1 ===
 # 2
 # 99
 # 99
 A chocolate biscuit, please!
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A chocolate biscuit with nothing on it, please.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -21,12 +25,14 @@ A chocolate biscuit with nothing on it, please.
 # 99
 I'd like a strawberry biscuit.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A strawberry biscuit with nothing on it.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -37,12 +43,14 @@ A strawberry biscuit with nothing on it.
 # 99
 Hi! A vanilla biscuit.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 Just a vanilla biscuit with nothing on it.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -53,12 +61,14 @@ Just a vanilla biscuit with nothing on it.
 # 3
 All the chocolate you have, please!
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A chocolate biscuit with chocolate whipped cream and a chocolate on top.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -69,12 +79,14 @@ A chocolate biscuit with chocolate whipped cream and a chocolate on top.
 # 0
 Could I have a chocolate biscuit with vanilla whipped cream and a strawberry on top?
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A chocolate biscuit with vanilla whipped cream and a strawberry on top.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -85,12 +97,14 @@ A chocolate biscuit with vanilla whipped cream and a strawberry on top.
 # 8
 Hi! A strawberry biscuit with sprinkles!
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A strawberry biscuit with sprinkles on top.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -101,12 +115,14 @@ A strawberry biscuit with sprinkles on top.
 # 6
 Hmmm...A white biscuit and brown whipped cream sounds good. Oh, and add some yellow syrup on top!
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A vanilla biscuit with chocolate whipped cream and honey.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -117,12 +133,14 @@ A vanilla biscuit with chocolate whipped cream and honey.
 # 7
 I want the strawberry biscuit with vanilla whipped cream. Drizzle some strawberry jam on it too!
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A strawberry biscuit with sprinkles on top.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -133,12 +151,14 @@ A strawberry biscuit with sprinkles on top.
 # 1
 Everything's better with a cherry on top! A chocolate biscuit with a cherry, thank you!
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A chocolate biscuit with a cherry on top.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -149,12 +169,14 @@ A chocolate biscuit with a cherry on top.
 # 2
 I love banana-flavored chocolate milk, so I'd like a chocolate biscuit with chocolate whipped cream and a banana!
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A chocolate biscuit with chocolate whipped cream and a banana on top.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -165,12 +187,14 @@ A chocolate biscuit with chocolate whipped cream and a banana on top.
 # 4
 A vanilla biscuit with vanilla whipped cream and caramel, please.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A vanilla biscuit with vanilla whipped cream and a caramel on top.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
@@ -181,12 +205,14 @@ A vanilla biscuit with vanilla whipped cream and a caramel on top.
 # 5
 I'm craving some color today. A strawberry biscuit with vanilla whipped cream and blueberries will do!
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
 A strawberry biscuit with vanilla whipped cream and blueberries on top.
 + [Okay.]
+    ~ leaveCounter()
     -> END
 + [What?]
     -> loop

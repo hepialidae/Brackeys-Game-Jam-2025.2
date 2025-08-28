@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -18,7 +19,10 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Ink")]
     private Story currentStory;
-    [SerializeField] TextAsset inkJSON;
+
+    [Header("Debug/Testing")]
+    [SerializeField] TextAsset inkJSON = null;
+    [SerializeField] string knotName = null;
 
     void Awake()
     {
@@ -50,6 +54,11 @@ public class DialogueManager : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
+
+        if (inkJSON != null && knotName != null)
+        {
+            EnterDialogueMode(inkJSON, knotName);
+        }
     }
 
     void Update()
@@ -72,10 +81,21 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         DialogueIsPlaying = true;
         DialogueCanvas.SetActive(true);
-
+        
         currentStory.ChoosePathString(knotName);
 
         ContinueStory();
+    }
+
+    public void BindLeaveCounter()
+    {
+        if (DialogueIsPlaying)
+        {
+            currentStory.BindExternalFunction("leaveCounter", () =>
+            {
+                SceneManager.LoadScene("Cooking1");
+            });
+        }
     }
 
     private void ExitDialogueMode()

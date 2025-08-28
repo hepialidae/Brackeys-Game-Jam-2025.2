@@ -15,3 +15,10 @@ Topping Indexes:
 6 - Honey
 7 - Jam
 8 - Sprinkles
+
+Customer Indexes:
+0 - Courtney
+1 - Tiffany
+2 - Performative Male
+3 - Backpacker 
+4 - Goth Girl
