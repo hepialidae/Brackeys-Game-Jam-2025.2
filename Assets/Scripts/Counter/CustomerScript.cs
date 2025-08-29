@@ -14,6 +14,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler
     private SpriteRenderer _renderer;
     private bool isVisible = false;
     private bool seesOrder = false;
+    private bool isSubscribed = false;
 
     void Start()
     {
@@ -23,6 +24,13 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler
         EventManagerScript_Counter.instance.OnBiscuitFinished.AddListener(BiscuitFinished);
 
         Disappear();
+    }
+
+    private void OnDisable()
+    {
+        if (EventManagerScript_Counter.instance != null && isSubscribed)
+            EventManagerScript_Counter.instance.OnCustomerServed -= Disappear;
+            isSubscribed = false;
     }
 
     private void Spawn(int customer)
@@ -91,6 +99,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler
     private void BiscuitFinished(int customer)
     {
         Debug.Log("BiscuitFinished in CustomerScript activated.");
+        isSubscribed = true;
         EventManagerScript_Counter.instance.OnCustomerServed += Disappear;
         if (customer == myCustomerIndex)
         {
