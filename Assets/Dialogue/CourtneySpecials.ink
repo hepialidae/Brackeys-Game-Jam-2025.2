@@ -64,17 +64,17 @@ A vanilla biscuit with blueberries, please!
 
 
 === Special3 ===
-# 0
+# 1
 # 99
-# 99
-A sweet red fruit with a green stalk on top of a chocolate biscuit will add sweetness to my day!
+# 6
+I've been coding for too long...I need something sweet. How about a strawberry biscuit with honey on top?
 + [Okay]
     ~ leaveCounter()
     -> END
 + [What?]
     -> loop
 = loop
-A chocolate biscuit with a cherry, please!
+A strawberry biscuit with honey on top.
 + [Okay]
     ~ leaveCounter()
     -> END
