@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class CustomerScript : MonoBehaviour, IPointerClickHandler
 {
@@ -77,12 +76,14 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler
 
     private void Appear()
     {
+        _renderer = gameObject.GetComponent<SpriteRenderer>();
         _renderer.sprite = mySprite;
         isVisible = true;
     }
 
     private void Disappear()
     {
+        _renderer = gameObject.GetComponent<SpriteRenderer>();
         _renderer.sprite = null;
         isVisible = false;
     }
@@ -90,6 +91,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler
     private void BiscuitFinished(int customer)
     {
         Debug.Log("BiscuitFinished in CustomerScript activated.");
+        EventManagerScript_Counter.instance.OnCustomerServed += Disappear;
         if (customer == myCustomerIndex)
         {
             seesOrder = true;
