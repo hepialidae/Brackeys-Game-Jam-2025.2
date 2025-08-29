@@ -53,4 +53,11 @@ public class EventManagerScript_Cooking2 : MonoBehaviour
     {
         OnTrashPressed.Invoke();
     }
+
+    // Player presses done
+    public event Action OnDonePressed;
+    public void DonePressed()
+    {
+        OnDonePressed.Invoke();
+    }
 }

@@ -26,10 +26,18 @@ public class EventManagerScript_Counter : MonoBehaviour
         return instance;
     }
 
-    // Spawns customer
-    public IntEvent OnCustomerSpawned;
-    public void SpawnCustomer(int customer)
+    // Spawns random customer (for the first time)
+    public IntEvent OnRandomCustomerSpawned;
+    public void SpawnRandomCustomer(int customer)
     {
-        OnCustomerSpawned.Invoke(customer);
+        OnRandomCustomerSpawned.Invoke(customer);
+    }
+
+    // Brings back customer
+    public IntEvent OnBiscuitFinished;
+    public void BiscuitFinished(int customer)
+    {
+        Debug.Log("BiscuitFinished activated. Customer: " + customer);
+        OnBiscuitFinished.Invoke(customer);
     }
 }

@@ -1,7 +1,9 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
+using UnityEngine.SocialPlatforms.Impl;
 
-public class CustomerScript : MonoBehaviour
+public class CustomerScript : MonoBehaviour, IPointerClickHandler
 {
     [Header("Ink Files")]
     [SerializeField] private TextAsset defaultOrders;
@@ -11,14 +13,15 @@ public class CustomerScript : MonoBehaviour
     [SerializeField] private int myCustomerIndex;
     [SerializeField] private Sprite mySprite;
     private SpriteRenderer _renderer;
-    private bool isVisible;
-    private bool seesOrder;
+    private bool isVisible = false;
+    private bool seesOrder = false;
 
     void Start()
     {
         _renderer = gameObject.GetComponent<SpriteRenderer>();
 
-        EventManagerScript_Counter.instance.OnCustomerSpawned.AddListener(Spawn);
+        EventManagerScript_Counter.instance.OnRandomCustomerSpawned.AddListener(Spawn);
+        EventManagerScript_Counter.instance.OnBiscuitFinished.AddListener(BiscuitFinished);
 
         Disappear();
     }
@@ -30,7 +33,6 @@ public class CustomerScript : MonoBehaviour
         if (customer == myCustomerIndex)
         {
             Appear();
-            OrderTracker.instance.customerIndex = customer;
 
             string orderString = GetOrder(GamestateManager.instance.day);
             if (orderString.Contains("Default"))
@@ -52,6 +54,27 @@ public class CustomerScript : MonoBehaviour
         }
     }
 
+    void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
+    {
+        if (seesOrder && isVisible)
+        {
+            string score = OrderTracker.instance.CalculateScore();
+            switch (score)
+            {
+                case "Good":
+                    int index = Random.Range(1, 4);
+                    DialogueManager.GetInstance().EnterDialogueMode(specialOrders, $"Good{index}");
+                    break;
+                case "Okay":
+                    DialogueManager.GetInstance().EnterDialogueMode(specialOrders, $"Okay");
+                    break;
+                case "Bad":
+                    DialogueManager.GetInstance().EnterDialogueMode(specialOrders, $"Bad");
+                    break;
+            }
+        }
+    }
+
     private void Appear()
     {
         _renderer.sprite = mySprite;
@@ -62,6 +85,16 @@ public class CustomerScript : MonoBehaviour
     {
         _renderer.sprite = null;
         isVisible = false;
+    }
+
+    private void BiscuitFinished(int customer)
+    {
+        Debug.Log("BiscuitFinished in CustomerScript activated.");
+        if (customer == myCustomerIndex)
+        {
+            seesOrder = true;
+            Appear();
+        }
     }
 
     private string GetOrder(int day)

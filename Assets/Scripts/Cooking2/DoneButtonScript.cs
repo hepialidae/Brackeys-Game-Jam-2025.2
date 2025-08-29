@@ -32,6 +32,7 @@ public class DoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
         Debug.Log("CreamIndex: " + creamIndex + "; ToppingIndex: " + toppingIndex);
         OrderTracker.instance.playerCreamIndex = creamIndex;
         OrderTracker.instance.playerToppingIndex = toppingIndex;
+        OrderTracker.instance.DonePressed();
     }
 
     private void CreamAdded(int cream)
