@@ -88,11 +88,25 @@ public class DialogueManager : MonoBehaviour
 
         currentStory.ChoosePathString(knotName);
 
-        if (knotName.Contains("Default") || knotName.Contains("Special"))
+        if (knotName.Contains("Default"))
         {
             BindLeaveCounter();
             List<string> knotTags = currentStory.TagsForContentAtPath(knotName).ToList();
             OrderTracker.instance.SetOrder(knotTags);
+        }
+
+        if (knotName.Contains("Special"))
+        {
+            BindLeaveCounter();
+            BindExitOrder();
+            List<string> knotTags = currentStory.TagsForContentAtPath(knotName).ToList();
+            OrderTracker.instance.SetOrder(knotTags);
+        }
+
+        if (knotName.Contains("Good") || knotName.Contains("Okay") || knotName.Contains("Bad"))
+        {
+            BindLeaveCounter();
+            BindExitOrder();
         }
 
         ContinueStory();
@@ -106,6 +120,15 @@ public class DialogueManager : MonoBehaviour
             // Debug.Log($"OrderCreamIndex: {OrderTracker.instance.orderCreamIndex}");
             // Debug.Log($"OrderToppingIndex: {OrderTracker.instance.orderToppingIndex}");
             SceneManager.LoadScene("Cooking1");
+        });
+    }
+
+    public void BindExitOrder()
+    {
+        currentStory.BindExternalFunction("endOrder", () =>
+        {
+            ExitDialogueMode();
+            EventManagerScript_Counter.instance.ServeCustomer();
         });
     }
 

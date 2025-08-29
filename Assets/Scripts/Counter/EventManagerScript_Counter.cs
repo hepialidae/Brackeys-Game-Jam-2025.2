@@ -4,21 +4,21 @@ using UnityEngine.Events;
 
 public class EventManagerScript_Counter : MonoBehaviour
 {
-    public static EventManagerScript_Counter instance;
+    public static EventManagerScript_Counter instance { get; private set; }
 
     [Serializable]
     public class IntEvent : UnityEvent<int> { }
 
     void Awake()
     {
-        if (instance != null)
+        if (instance != null && instance != this)
         {
-            Debug.Log("More than one instance of EventManagerScript_Counter found.");
+            Destroy(gameObject);
+            return;
         }
-        else
-        {
-            instance = this;
-        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public static EventManagerScript_Counter GetInstance()
@@ -39,5 +39,12 @@ public class EventManagerScript_Counter : MonoBehaviour
     {
         Debug.Log("BiscuitFinished activated. Customer: " + customer);
         OnBiscuitFinished.Invoke(customer);
+    }
+
+    // Customer leaves
+    public event Action OnCustomerServed;
+    public void ServeCustomer()
+    {
+        OnCustomerServed.Invoke();
     }
 }
