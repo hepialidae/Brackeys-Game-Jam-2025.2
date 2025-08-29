@@ -22,3 +22,4 @@ Customer Indexes:
 2 - Performative Male
 3 - Backpacker 
 4 - Goth Girl
+5 - Kyle

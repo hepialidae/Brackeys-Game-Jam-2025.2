@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class CustomerScript : MonoBehaviour, IPointerClickHandler
+public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Ink Files")]
     [SerializeField] private TextAsset defaultOrders;
@@ -11,6 +11,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler
     [Header("Customer Info")]
     [SerializeField] private int myCustomerIndex;
     [SerializeField] private Sprite mySprite;
+    [SerializeField] private GameObject customerOutline;
     private SpriteRenderer _renderer;
     private bool isVisible = false;
     private bool seesOrder = false;
@@ -65,6 +66,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler
     {
         if (seesOrder && isVisible)
         {
+            customerOutline.SetActive(false);
             string score = OrderTracker.instance.CalculateScore();
             switch (score)
             {
@@ -79,6 +81,22 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler
                     DialogueManager.GetInstance().EnterDialogueMode(specialOrders, $"Bad");
                     break;
             }
+        }
+    }
+
+    void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
+    {
+        if (seesOrder && isVisible)
+        {
+            customerOutline.SetActive(true);
+        }
+    }
+
+    void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
+    {
+        if (seesOrder && isVisible)
+        {
+            customerOutline.SetActive(false);
         }
     }
 
