@@ -40,7 +40,7 @@ public class CustomerManagerScript : MonoBehaviour
         customersVisited.Add(randomCustomer);
         EventManagerScript_Counter.instance.SpawnRandomCustomer(randomCustomer);
 
-        if (customersVisited.Count == 2) // If change this number, change DialogueManagerScript_Counter line 138
+        if (customersVisited.Count == 5) // If change this number, change DialogueManagerScript_Counter line 138
         {
             EventManagerScript_Counter.instance.OnCustomerServed -= RunWait;
         }
