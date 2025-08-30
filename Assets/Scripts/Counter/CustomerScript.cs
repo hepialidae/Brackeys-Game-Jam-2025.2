@@ -30,7 +30,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
         EventManagerScript_Counter.instance.OnRandomCustomerSpawned.AddListener(Spawn);
         EventManagerScript_Counter.instance.OnBiscuitFinished.AddListener(BiscuitFinished);
 
-        Despawn();
+        Disappear();
     }
 
     private void OnDisable()
@@ -132,7 +132,13 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     private void Despawn()
     {
-        // PopDownAnim();
+        StartCoroutine(SecondsDespawn());
+    }
+
+    private IEnumerator SecondsDespawn()
+    {
+        PopDownAnim();
+        yield return new WaitForSeconds(0.3f);
         Disappear();
     }
 
@@ -208,10 +214,10 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
         gameObject.transform.DOMoveY(yValue, 0.3f).SetEase(Ease.OutBack);
     }
 
-    // private void PopDownAnim()
-    // {
-    //     Debug.Log("Pop down anim entered");
-    //     gameObject.transform.DOKill();
-    //     gameObject.transform.DOMoveY(-10f, 0.3f).SetEase(Ease.OutBack);
-    // }
+    private void PopDownAnim()
+    {
+        Debug.Log("Pop down anim entered");
+        gameObject.transform.DOKill();
+        gameObject.transform.DOMoveY(-10f, 0.3f).SetEase(Ease.OutBack);
+    }
 }
