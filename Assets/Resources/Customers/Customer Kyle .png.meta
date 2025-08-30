@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ede27a938fc545f1a90903e905922e1
+guid: 2f3459a3b4d89431a8bdf64b1df9e285
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5534980878785722327
-    second: Blueberries topping _0
+      213: -6660530872889721746
+    second: Customer Kyle _0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blueberries topping _0
+      name: Customer Kyle _0
       rect:
         serializedVersion: 2
-        x: 849
-        y: 379
-        width: 212
-        height: 82
+        x: 49
+        y: 0
+        width: 1182
+        height: 1271
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d73a9e98c330dc40800000000000000
-      internalID: 5534980878785722327
+      spriteID: e6cb2e9c57a0193a0800000000000000
+      internalID: -6660530872889721746
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Blueberries topping _0: 5534980878785722327
+      Customer Kyle _0: -6660530872889721746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
