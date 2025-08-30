@@ -116,7 +116,6 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     private void BiscuitFinished(int customer)
     {
-        Debug.Log("BiscuitFinished in CustomerScript activated.");
         isSubscribed = true;
         EventManagerScript_Counter.instance.OnCustomerServed += Despawn;
         if (customer == myCustomerIndex)
@@ -216,7 +215,6 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     private void PopDownAnim()
     {
-        Debug.Log("Pop down anim entered");
         gameObject.transform.DOKill();
         gameObject.transform.DOMoveY(-10f, 0.3f).SetEase(Ease.OutBack);
     }

@@ -135,7 +135,7 @@ public class DialogueManager : MonoBehaviour
             ExitDialogueMode();
             EventManagerScript_Counter.instance.ServeCustomer();
 
-            if (CustomerManagerScript.instance.customersVisited.Count == 5) // If change this number, change CustomerManagerScript
+            if (CustomerManagerScript.instance.customersVisited.Count == 2) // If change this number, change CustomerManagerScript
             {
                 EventManagerScript_Counter.instance.EndDay(GamestateManager.instance.day);
             }
