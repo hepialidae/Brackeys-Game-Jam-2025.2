@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -12,6 +13,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     [SerializeField] private int myCustomerIndex;
     [SerializeField] private Sprite mySprite;
     [SerializeField] private GameObject customerOutline;
+    [SerializeField] private float yValue;
     private SpriteRenderer _renderer;
     private bool isVisible = false;
     private bool seesOrder = false;
@@ -33,7 +35,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     {
         if (EventManagerScript_Counter.instance != null && isSubscribed)
             EventManagerScript_Counter.instance.OnCustomerServed -= Disappear;
-            isSubscribed = false;
+        isSubscribed = false;
     }
 
     private void Spawn(int customer)
@@ -43,6 +45,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
         if (customer == myCustomerIndex)
         {
             Appear();
+            PopUpAnim();
 
             string orderString = GetOrder(GamestateManager.instance.day);
             if (orderString.Contains("Default"))
@@ -108,7 +111,6 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     private void Appear()
     {
-        Debug.Log("Appearing customer " + myCustomerIndex);
         _renderer = gameObject.GetComponent<SpriteRenderer>();
         _renderer.enabled = true;
         isVisible = true;
@@ -116,7 +118,6 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     private void Disappear()
     {
-        Debug.Log("Disappearing customer " + myCustomerIndex);
         _renderer = gameObject.GetComponent<SpriteRenderer>();
         _renderer.enabled = false;
         isVisible = false;
@@ -178,5 +179,13 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     private IEnumerator Wait()
     {
         yield return null;
+    }
+    
+    private void PopUpAnim()
+    {
+        Vector3 pos = new Vector3(gameObject.transform.localPosition.x, -6.33f);
+        gameObject.transform.localPosition = pos;
+        
+        gameObject.transform.DOMoveY(yValue, 0.3f).SetEase(Ease.OutBack);
     }
 }

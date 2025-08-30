@@ -80,6 +80,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON, string knotName)
     {
+        Debug.Log("EnterDialogueMode entered");
         DialogueCanvas.SetActive(true);
 
         currentStory = new Story(inkJSON.text);

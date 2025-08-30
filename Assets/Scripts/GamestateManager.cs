@@ -6,6 +6,7 @@ public class GamestateManager : MonoBehaviour
 
     [Header("Game Variables")]
     public int day = 1;
+    public float money = 0;
 
     void Awake()
     {

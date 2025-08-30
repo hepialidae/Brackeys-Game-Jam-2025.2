@@ -21,9 +21,8 @@ public class CustomerManagerScript : MonoBehaviour
 
     void Start()
     {
+        EventManagerScript_Counter.instance.OnDayBegin.AddListener(RunWaitWithInt);
         EventManagerScript_Counter.instance.OnCustomerServed += RunWait;
-
-        StartCoroutine(Wait());
     }
 
     private void SpawnRandomCustomer()
@@ -40,10 +39,15 @@ public class CustomerManagerScript : MonoBehaviour
 
     private void RunWait()
     {
-        StartCoroutine(Wait());
+        StartCoroutine(WaitToSpawn());
     }
 
-    private IEnumerator Wait()
+    private void RunWaitWithInt(int day)
+    {
+        StartCoroutine(WaitToSpawn());
+    }
+
+    private IEnumerator WaitToSpawn()
     {
         yield return new WaitForSeconds(0.5f);
         SpawnRandomCustomer();

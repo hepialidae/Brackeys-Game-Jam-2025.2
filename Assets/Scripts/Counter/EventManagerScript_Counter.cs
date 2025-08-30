@@ -26,6 +26,13 @@ public class EventManagerScript_Counter : MonoBehaviour
         return instance;
     }
 
+    // Day starts (after story)
+    public IntEvent OnDayBegin;
+    public void StartDay(int dayNum)
+    {
+        OnDayBegin.Invoke(dayNum);
+    }
+
     // Spawns random customer (for the first time)
     public IntEvent OnRandomCustomerSpawned;
     public void SpawnRandomCustomer(int customer)
