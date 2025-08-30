@@ -12,6 +12,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     [Header("Customer Info")]
     [SerializeField] private int myCustomerIndex;
     [SerializeField] private Sprite mySprite;
+    [SerializeField] private PolygonCollider2D _collider;
     [SerializeField] private GameObject customerOutline;
     [SerializeField] private float yValue;
     private SpriteRenderer _renderer;
@@ -22,19 +23,20 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     void Start()
     {
         _renderer = gameObject.GetComponent<SpriteRenderer>();
+        _collider = gameObject.GetComponent<PolygonCollider2D>();
 
         customerOutline.SetActive(false);
 
         EventManagerScript_Counter.instance.OnRandomCustomerSpawned.AddListener(Spawn);
         EventManagerScript_Counter.instance.OnBiscuitFinished.AddListener(BiscuitFinished);
 
-        Disappear();
+        Despawn();
     }
 
     private void OnDisable()
     {
         if (EventManagerScript_Counter.instance != null && isSubscribed)
-            EventManagerScript_Counter.instance.OnCustomerServed -= Disappear;
+            EventManagerScript_Counter.instance.OnCustomerServed -= Despawn;
         isSubscribed = false;
     }
 
@@ -73,6 +75,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log(seesOrder + " " + isVisible);
         if (seesOrder && isVisible)
         {
             customerOutline.SetActive(false);
@@ -109,30 +112,28 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
         }
     }
 
-    private void Appear()
-    {
-        _renderer = gameObject.GetComponent<SpriteRenderer>();
-        _renderer.enabled = true;
-        isVisible = true;
-    }
-
-    private void Disappear()
-    {
-        _renderer = gameObject.GetComponent<SpriteRenderer>();
-        _renderer.enabled = false;
-        isVisible = false;
-    }
+    
 
     private void BiscuitFinished(int customer)
     {
         Debug.Log("BiscuitFinished in CustomerScript activated.");
         isSubscribed = true;
-        EventManagerScript_Counter.instance.OnCustomerServed += Disappear;
+        EventManagerScript_Counter.instance.OnCustomerServed += Despawn;
         if (customer == myCustomerIndex)
         {
             seesOrder = true;
             Appear();
+            PopUpAnim();
+
+            Vector3 pos = new Vector3(gameObject.transform.localPosition.x, yValue);
+            gameObject.transform.localPosition = pos;
         }
+    }
+
+    private void Despawn()
+    {
+        // PopDownAnim();
+        Disappear();
     }
 
     private string GetOrder(int day)
@@ -180,12 +181,37 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     {
         yield return null;
     }
-    
+
+    private void Appear()
+    {
+        _renderer = gameObject.GetComponent<SpriteRenderer>();
+        _renderer.enabled = true;
+        _collider.enabled = true;
+        isVisible = true;
+    }
+
+    private void Disappear()
+    {
+        _renderer = gameObject.GetComponent<SpriteRenderer>();
+        _renderer.enabled = false;
+        _collider.enabled = false;
+        isVisible = false;
+    }
+
     private void PopUpAnim()
     {
-        Vector3 pos = new Vector3(gameObject.transform.localPosition.x, -6.33f);
+        gameObject.transform.DOKill();
+
+        Vector3 pos = new Vector3(gameObject.transform.localPosition.x, -10f);
         gameObject.transform.localPosition = pos;
-        
+
         gameObject.transform.DOMoveY(yValue, 0.3f).SetEase(Ease.OutBack);
     }
+
+    // private void PopDownAnim()
+    // {
+    //     Debug.Log("Pop down anim entered");
+    //     gameObject.transform.DOKill();
+    //     gameObject.transform.DOMoveY(-10f, 0.3f).SetEase(Ease.OutBack);
+    // }
 }

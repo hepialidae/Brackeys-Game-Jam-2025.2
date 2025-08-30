@@ -54,4 +54,11 @@ public class EventManagerScript_Counter : MonoBehaviour
     {
         OnCustomerServed.Invoke();
     }
+
+    // End of day
+    public IntEvent OnDayEnd;
+    public void EndDay(int day)
+    {
+        OnDayEnd.Invoke(day);
+    }
 }

@@ -98,7 +98,7 @@ public class DialogueManager : MonoBehaviour
         if (knotName.Contains("Special"))
         {
             BindLeaveCounter();
-            BindExitOrder();
+            BindEndOrder();
             List<string> knotTags = currentStory.TagsForContentAtPath(knotName).ToList();
             OrderTracker.instance.SetOrder(knotTags);
         }
@@ -106,7 +106,12 @@ public class DialogueManager : MonoBehaviour
         if (knotName.Contains("Good") || knotName.Contains("Okay") || knotName.Contains("Bad"))
         {
             BindLeaveCounter();
-            BindExitOrder();
+            BindEndOrder();
+        }
+
+        if (knotName.Contains("Introduction"))
+        {
+            BindStartDay();
         }
 
         ContinueStory();
@@ -123,12 +128,26 @@ public class DialogueManager : MonoBehaviour
         });
     }
 
-    public void BindExitOrder()
+    public void BindEndOrder()
     {
         currentStory.BindExternalFunction("endOrder", () =>
         {
             ExitDialogueMode();
             EventManagerScript_Counter.instance.ServeCustomer();
+
+            if (CustomerManagerScript.instance.customersVisited.Count == 5) // If change this number, change CustomerManagerScript
+            {
+                EventManagerScript_Counter.instance.EndDay(GamestateManager.instance.day);
+            }
+        });
+    }
+
+    public void BindStartDay()
+    {
+        currentStory.BindExternalFunction("startDay", (int day) =>
+        {
+            ExitDialogueMode();
+            EventManagerScript_Counter.instance.StartDay(day);
         });
     }
 
