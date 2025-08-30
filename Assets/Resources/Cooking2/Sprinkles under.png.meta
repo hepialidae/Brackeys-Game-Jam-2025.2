@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: 788683aefc40246f9a5928b08ec0c084
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2356224772212277725
+    second: Sprinkles under_0
+  - first:
+      213: -8571272798732767796
+    second: Sprinkles under_1
+  - first:
+      213: 6898509118932004885
+    second: Sprinkles under_2
+  - first:
+      213: -558751863144910889
+    second: Sprinkles under_3
+  - first:
+      213: -5370217669344289599
+    second: Sprinkles under_4
+  - first:
+      213: 2850077086995376994
+    second: Sprinkles under_5
+  - first:
+      213: 2161234970961824008
+    second: Sprinkles under_6
+  - first:
+      213: -3018638705996225511
+    second: Sprinkles under_7
+  - first:
+      213: -789892222430916289
+    second: Sprinkles under_8
+  - first:
+      213: 2601620938364320407
+    second: Sprinkles under_9
+  - first:
+      213: -8180658788261240611
+    second: Sprinkles under_10
+  - first:
+      213: 3636950778087793576
+    second: Sprinkles under_11
+  - first:
+      213: -2341214766462354357
+    second: Sprinkles under_12
+  - first:
+      213: -6098663071959942210
+    second: Sprinkles under_13
+  - first:
+      213: 5379803104655843773
+    second: Sprinkles under_14
+  - first:
+      213: -5838992989020427294
+    second: Sprinkles under_15
+  - first:
+      213: 712305178099893122
+    second: Sprinkles under_16
+  - first:
+      213: -6759257583424497312
+    second: Sprinkles under_17
+  - first:
+      213: 647742799605856971
+    second: Sprinkles under_18
+  - first:
+      213: -5357310249842034035
+    second: Sprinkles under_19
+  - first:
+      213: 8961973967096676504
+    second: Sprinkles under_20
+  - first:
+      213: -1135710182838450409
+    second: Sprinkles under_21
+  - first:
+      213: 3882996241360522700
+    second: Sprinkles under_22
+  - first:
+      213: -2022616143698500213
+    second: Sprinkles under_23
+  - first:
+      213: -2943830038282690299
+    second: Sprinkles under_24
+  - first:
+      213: -4823550251284445080
+    second: Sprinkles under_25
+  - first:
+      213: 4530942736824992628
+    second: Sprinkles under_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprinkles under_0
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 479
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd140be42fdf2b020800000000000000
+      internalID: 2356224772212277725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_1
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 429
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccda0965dc8bc0980800000000000000
+      internalID: -8571272798732767796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_2
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 449
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5103cb96e7d6cbf50800000000000000
+      internalID: 6898509118932004885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_3
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 429
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dfe8af042aee38f0800000000000000
+      internalID: -558751863144910889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_4
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 439
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc153c7b772975b0800000000000000
+      internalID: -5370217669344289599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_5
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 449
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26be6d0a2028d8720800000000000000
+      internalID: 2850077086995376994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_6
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 459
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809c45061cf3efd10800000000000000
+      internalID: 2161234970961824008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_7
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 439
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914a9df1714ab16d0800000000000000
+      internalID: -3018638705996225511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_8
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 429
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31592f653db905f0800000000000000
+      internalID: -789892222430916289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_9
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 409
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79a7c6f9570da1420800000000000000
+      internalID: 2601620938364320407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_10
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 409
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0e201dc26787e80800000000000000
+      internalID: -8180658788261240611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_11
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 389
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3e089967b097230800000000000000
+      internalID: 3636950778087793576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_12
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 419
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4cbc1ef295528fd0800000000000000
+      internalID: -2341214766462354357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_13
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 389
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebbf8078f323d5ba0800000000000000
+      internalID: -6098663071959942210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_14
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 369
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db12e869b66e8aa40800000000000000
+      internalID: 5379803104655843773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_15
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 379
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ebe07310dab7fea0800000000000000
+      internalID: -5838992989020427294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_16
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 389
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283c05819cd92e900800000000000000
+      internalID: 712305178099893122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_17
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 379
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0691e9a3a0b4232a0800000000000000
+      internalID: -6759257583424497312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_18
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 359
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcaf254f4ae3df800800000000000000
+      internalID: 647742799605856971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_19
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 379
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a3b9646b207a5b0800000000000000
+      internalID: -5357310249842034035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_20
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 379
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890881b27d35f5c70800000000000000
+      internalID: 8961973967096676504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_21
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 379
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717ce102b952d30f0800000000000000
+      internalID: -1135710182838450409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_22
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 349
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd887e228c23e530800000000000000
+      internalID: 3882996241360522700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_23
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 359
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8561e565593ee3e0800000000000000
+      internalID: -2022616143698500213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_24
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 349
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50129016d2a6527d0800000000000000
+      internalID: -2943830038282690299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_25
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 329
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868c1fb4a9e4f0db0800000000000000
+      internalID: -4823550251284445080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprinkles under_26
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 359
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4730716c96421ee30800000000000000
+      internalID: 4530942736824992628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Sprinkles under_0: 2356224772212277725
+      Sprinkles under_1: -8571272798732767796
+      Sprinkles under_10: -8180658788261240611
+      Sprinkles under_11: 3636950778087793576
+      Sprinkles under_12: -2341214766462354357
+      Sprinkles under_13: -6098663071959942210
+      Sprinkles under_14: 5379803104655843773
+      Sprinkles under_15: -5838992989020427294
+      Sprinkles under_16: 712305178099893122
+      Sprinkles under_17: -6759257583424497312
+      Sprinkles under_18: 647742799605856971
+      Sprinkles under_19: -5357310249842034035
+      Sprinkles under_2: 6898509118932004885
+      Sprinkles under_20: 8961973967096676504
+      Sprinkles under_21: -1135710182838450409
+      Sprinkles under_22: 3882996241360522700
+      Sprinkles under_23: -2022616143698500213
+      Sprinkles under_24: -2943830038282690299
+      Sprinkles under_25: -4823550251284445080
+      Sprinkles under_26: 4530942736824992628
+      Sprinkles under_3: -558751863144910889
+      Sprinkles under_4: -5370217669344289599
+      Sprinkles under_5: 2850077086995376994
+      Sprinkles under_6: 2161234970961824008
+      Sprinkles under_7: -3018638705996225511
+      Sprinkles under_8: -789892222430916289
+      Sprinkles under_9: 2601620938364320407
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

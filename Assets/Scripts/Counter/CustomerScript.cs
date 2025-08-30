@@ -21,6 +21,8 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     {
         _renderer = gameObject.GetComponent<SpriteRenderer>();
 
+        customerOutline.SetActive(false);
+
         EventManagerScript_Counter.instance.OnRandomCustomerSpawned.AddListener(Spawn);
         EventManagerScript_Counter.instance.OnBiscuitFinished.AddListener(BiscuitFinished);
 
@@ -59,6 +61,10 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
                     Debug.Log("OrderString does not contain Default or Special. Somehow. Here: " + orderString);
                 }
             }
+        }
+        else
+        {
+            Disappear();
         }
     }
 
@@ -102,15 +108,17 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
 
     private void Appear()
     {
+        Debug.Log("Appearing customer " + myCustomerIndex);
         _renderer = gameObject.GetComponent<SpriteRenderer>();
-        _renderer.sprite = mySprite;
+        _renderer.enabled = true;
         isVisible = true;
     }
 
     private void Disappear()
     {
+        Debug.Log("Disappearing customer " + myCustomerIndex);
         _renderer = gameObject.GetComponent<SpriteRenderer>();
-        _renderer.sprite = null;
+        _renderer.enabled = false;
         isVisible = false;
     }
 

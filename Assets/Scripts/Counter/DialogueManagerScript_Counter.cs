@@ -20,7 +20,6 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Ink")]
     private Story currentStory;
-    private string[] tags;
 
     [Header("Debug/Testing")]
     [SerializeField] TextAsset inkJSON = null;
@@ -145,11 +144,38 @@ public class DialogueManager : MonoBehaviour
         {
             DialogueText.text = currentStory.Continue();
             DisplayChoices();
+
+            List<string> lineTags = currentStory.currentTags;
+            if (lineTags != null && lineTags.Count != 0)
+            {
+                HandleTags(lineTags);
+            }
         }
         else
         {
             ExitDialogueMode();
         }
+    }
+
+    private void HandleTags(List<string> tags)
+    {
+        int len = tags.Count;
+        switch (len)
+        {
+            case 1:
+                if (tags[0] == "red")
+                {
+                    DialogueText.color = Color.red;
+                    break;
+                }
+                if (tags[0] == "normal")
+                {
+                    DialogueText.color = ColorUtility.TryParseHtmlString("#925B6E", out var c) ? c : Color.white;
+                    break;
+                }
+                break;
+        }
+        
     }
 
     private void DisplayChoices()
