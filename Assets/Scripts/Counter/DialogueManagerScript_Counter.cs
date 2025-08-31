@@ -4,6 +4,7 @@ using Ink.Runtime;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -90,16 +91,16 @@ public class DialogueManager : MonoBehaviour
 
         if (knotName.Contains("Default"))
         {
-            BindLeaveCounter();
             List<string> knotTags = currentStory.TagsForContentAtPath(knotName).ToList();
+            BindLeaveCounter();
             OrderTracker.instance.SetOrder(knotTags);
         }
 
         if (knotName.Contains("Special"))
         {
+            List<string> knotTags = currentStory.TagsForContentAtPath(knotName).ToList();
             BindLeaveCounter();
             BindEndOrder();
-            List<string> knotTags = currentStory.TagsForContentAtPath(knotName).ToList();
             OrderTracker.instance.SetOrder(knotTags);
         }
 
@@ -114,6 +115,11 @@ public class DialogueManager : MonoBehaviour
             BindStartDay();
         }
 
+        if (knotName.Contains("Day"))
+        {
+            
+        }
+
         ContinueStory();
     }
 
@@ -124,8 +130,15 @@ public class DialogueManager : MonoBehaviour
             // Debug.Log($"OrderDoughIndex: {OrderTracker.instance.orderDoughIndex}");
             // Debug.Log($"OrderCreamIndex: {OrderTracker.instance.orderCreamIndex}");
             // Debug.Log($"OrderToppingIndex: {OrderTracker.instance.orderToppingIndex}");
-            SceneManager.LoadScene("Cooking1");
+            StartCoroutine(LeaveCounter());
         });
+    }
+
+    private IEnumerator LeaveCounter()
+    {
+        GamestateManager.instance.ChangeMoney(OrderTracker.instance.orderPrice);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Cooking1");
     }
 
     public void BindEndOrder()
@@ -148,6 +161,34 @@ public class DialogueManager : MonoBehaviour
         {
             ExitDialogueMode();
             EventManagerScript_Counter.instance.StartDay(day);
+        });
+    }
+
+    public void BindDemons()
+    {
+        currentStory.BindExternalFunction("finger", () =>
+        {
+            ExitDialogueMode();
+        });
+
+        currentStory.BindExternalFunction("end", () =>
+        {
+            ExitDialogueMode();
+        });
+
+        currentStory.BindExternalFunction("hand", () =>
+        {
+            ExitDialogueMode();
+        });
+
+        currentStory.BindExternalFunction("eye", () =>
+        {
+            ExitDialogueMode();
+        });
+
+        currentStory.BindExternalFunction("lifeforce", () =>
+        {
+            ExitDialogueMode();
         });
     }
 
@@ -195,7 +236,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 break;
         }
-        
+
     }
 
     private void DisplayChoices()

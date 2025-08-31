@@ -35,8 +35,9 @@ public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (CanPlaceDough)
         {
-            EventManagerScript.instance.ChooseDoughType(0);
             vaniDoughOutline.SetActive(false);
+            GamestateManager.instance.ChangeMoney(-5);
+            EventManagerScript.instance.ChooseDoughType(0);
         }
     }
 

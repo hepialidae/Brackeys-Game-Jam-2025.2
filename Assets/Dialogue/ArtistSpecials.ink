@@ -30,6 +30,7 @@ If I were a famous British chef, I'd be screaming at you right now.
 # 2
 # 0
 # 2
+# 18.5
 I've been loving bananas and vanilla cream recently. Oh, and add a chocolate base!
 + [Okay]
     ~ leaveCounter()
@@ -48,6 +49,7 @@ A chocolate biscuit with vanilla whipped cream and a banana on top.
 # 0
 # 0
 # 0
+# 18.5
 Do you know about strawberry shortcakes? It's a vanilla base with vanilla whipped cream and a strawberry on top!
 + [Okay]
     ~ leaveCounter()
@@ -66,6 +68,7 @@ A vanilla biscuit with vanilla whipped cream and a strawberry on top.
 # 1
 # 1
 # 5
+# 18.5
 I'm feeling kind of blue today. But I guess biscuits and whipped cream should be pink.
 + [Okay]
     ~ leaveCounter()

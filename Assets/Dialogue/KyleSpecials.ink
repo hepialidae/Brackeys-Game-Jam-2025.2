@@ -30,6 +30,7 @@ I don't think this is what I ordered...
 # 0
 # 2
 # 99
+# 15
 I'll have a...vanilla biscuit with chocolate cream. Do you mind if I work on my music here? 
 + [Okay]
     ~ leaveCounter()
@@ -48,6 +49,7 @@ A vanilla biscuit with chocolate cream.
 # 1
 # 1
 # 3
+# 20
 I heard strawberries and chocolate go well together. Coud I get a strawberry biscuit, strawberry whipped cream, and that chocolate topping?
 + [Okay]
     ~ leaveCounter()
@@ -66,6 +68,7 @@ A strawberry biscuit with strawberry whipped cream and a chocolate on top.
 # 2
 # 99
 # 3
+# 15
 I'm craving chocolate today, but could you leave out the whipped cream?
 + [Okay]
     ~ leaveCounter()

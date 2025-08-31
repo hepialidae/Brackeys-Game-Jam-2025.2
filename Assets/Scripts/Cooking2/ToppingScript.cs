@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,6 +7,7 @@ public class ToppingScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [Header("Topping Features")]
     [SerializeField] GameObject toppingOutline;
     [SerializeField] private int toppingIndex;
+    [SerializeField] private float toppingPrice;
 
     [Header("Variables")]
     [SerializeField] private bool CanAddTopping = true;
@@ -41,6 +43,7 @@ public class ToppingScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (CanAddTopping)
         {
             toppingOutline.SetActive(false);
+            GamestateManager.instance.ChangeMoney(-toppingPrice);
 
             if (WhippedCreamAdded)
             {

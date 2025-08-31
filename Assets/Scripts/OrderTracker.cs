@@ -13,6 +13,7 @@ public class OrderTracker : MonoBehaviour
     public int orderDoughIndex = 99;
     public int orderCreamIndex = 99;
     public int orderToppingIndex = 99;
+    public float orderPrice = 0;
 
     // Player variables
     public int playerDoughIndex = 99;
@@ -60,6 +61,7 @@ public class OrderTracker : MonoBehaviour
         orderDoughIndex = int.Parse(tags[0].Trim());
         orderCreamIndex = int.Parse(tags[1].Trim());
         orderToppingIndex = int.Parse(tags[2].Trim());
+        orderPrice = float.Parse(tags[3].Trim());
     }
 
     public void DonePressed()

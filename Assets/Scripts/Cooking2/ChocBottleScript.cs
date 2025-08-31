@@ -35,6 +35,7 @@ public class ChocBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (CanPlaceCream)
         {
             chocBottleOutline.SetActive(false);
+            GamestateManager.instance.ChangeMoney(-2.5f);
             EventManagerScript_Cooking2.instance.CreamAdded(2);
         }
     }

@@ -30,6 +30,7 @@ Ugh. Not even my cat, Matcha, would eat this.
 # 1
 # 1
 # 7
+# 17
 I want an all-pink biscuit-cream-topping combo, but with no fruit toppings. I'll call this the Feminism Special!
 + [Okay]
     ~ leaveCounter()
@@ -48,6 +49,7 @@ A strawberry biscuit with strawberry whipped cream and strawberry jam.
 # 2
 # 0
 # 5
+# 18.5
 My favorite singer, Clairo, loves grapes. ...Since you don't have that, I'll have the closest thing to grapes - blueberries - on top of a chocolate biscuit and vanilla whipped cream!
 + [Okay]
     ~ leaveCounter()
@@ -66,6 +68,7 @@ A chocolate biscuit with vanilla whipped cream and blueberries.
 # 1
 # 99
 # 2
+# 13.5
 I heard chocolates and bananas are good for period cramps. No whipped cream! I'm doing my part in the fight against period cramps!
 + [Okay]
     ~ leaveCounter()

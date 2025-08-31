@@ -19,4 +19,10 @@ public class GamestateManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+    public void ChangeMoney(float amount)
+    {
+        money += amount;
+        MoneyButtonScript.instance.RunMoneyChanged(amount);
+    }
 }

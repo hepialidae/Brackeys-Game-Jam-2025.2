@@ -36,6 +36,7 @@ public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (CanPlaceDough)
         {
             chocDoughOutline.SetActive(false);
+            GamestateManager.instance.ChangeMoney(-5);
             EventManagerScript.instance.ChooseDoughType(2);
         }
     }

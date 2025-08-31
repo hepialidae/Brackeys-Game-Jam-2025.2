@@ -1,8 +1,8 @@
-// EXTERNAL finger()
-// EXTERNAL end()
-// EXTERNAL hand()
-// EXTERNAL eye()
-// EXTERNAL lifeforce()
+EXTERNAL finger()
+EXTERNAL end()
+EXTERNAL hand()
+EXTERNAL eye()
+EXTERNAL lifeforce()
 
 === Day1 ===
 Oh, hello, friend.
@@ -25,7 +25,7 @@ Really, it'll be fine.
 Here, I'll even let you choose which one.
 + [Okay...]
     Perfect.
-    //~ finger()
+    ~ finger()
     -> END
 + [No!]
     You know that's not what you want.
@@ -36,11 +36,11 @@ Here, I'll even let you choose which one.
 = stitch1
  + [...I suppose.]
     Don't worry. I'm here to help.
-    //~ finger()
+    ~ finger()
     -> END
 + [No.]
     Well, I can't stop you.
-    //~ end()
+    ~ end()
     -> END
 
 === Day2 ===
@@ -58,7 +58,7 @@ It won't hurt. Really, you'll see that it's worth it. # normal
 Won't you lend me a helping hand?
 + [Fine...]
     Perfect.
-    //~ hand()
+    ~ hand()
     -> END
 + [Not this again.]
     You can trust me. It's not like I didn't give you money last time, right?
@@ -69,11 +69,11 @@ Won't you lend me a helping hand?
 =stitch1
 + [I guess...]
     You won't regret this.
-    //~ hand()
+    ~ hand()
     -> END
 + [No.]
     Well, I can't stop you.
-    //~ end()
+    ~ end()
     -> END
 -> END
 
@@ -99,7 +99,7 @@ They go about life perfectly fine. They never complain about losing an eye.
 What do you say? I'll give you the usual, of course.
 + [Okay.]
     Perfect.
-    //~ eye()
+    ~ eye()
     -> END
 + [I'm not sure...]
     Well...you've come so far already. You're halfway to your $400 goal.
@@ -111,11 +111,11 @@ What do you say? I'll give you the usual, of course.
 =stitch1
 + [Okay...]
     You're doing this for yourself.
-    //~ eye()
+    ~ eye()
     -> END
 + [No.]
     Well, I can't stop you.
-    //~ end()
+    ~ end()
     -> END
 -> END
 
@@ -146,7 +146,7 @@ Please. I need this.
     You humans...sure have a lot of empathy.
     I can't believe that worked on you!
     Enjoy your five years!
-    //~ lifeforce()
+    ~ lifeforce()
     -> END
 + [No!]
     ...That's completely understandable.
@@ -162,10 +162,10 @@ Please. I need this.
     I can't believe that worked on you!
     You humans sure are foolish.
     Enjoy your five years!
-    //~ lifeforce()
+    ~ lifeforce()
     -> END
 + [Never.]
     You've doomed me.
-    //~ end()
+    ~ end()
     -> END
 -> END

@@ -23,3 +23,17 @@ Customer Indexes:
 3 - Backpacker 
 4 - Goth Girl
 5 - Kyle
+
+Order Prices:
+Base biscuit - $10
+Whipped cream - $5
+Strawberry/Cherry/Banana/Blueberry - $3.50
+Chocolate/Caramel/Sprinkles - $5
+Honey/Jam - $2
+
+Ingredient Prices:
+Dough - $5
+Whipped cream - $2.50
+Strawberry/Cherry/Banana/Blueberry - $2.50
+Chocolate/Caramel/Sprinkles - $3
+Honey/Jam - $0.50

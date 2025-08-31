@@ -36,6 +36,7 @@ public class StrawDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (CanPlaceDough)
         {
             strawDoughOutline.SetActive(false);
+            GamestateManager.instance.ChangeMoney(-5);
             EventManagerScript.instance.ChooseDoughType(1);
         }
     }

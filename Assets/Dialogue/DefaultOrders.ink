@@ -1,10 +1,11 @@
-// Tag numbers are as follows: doughIndex, creamIndex, toppingIndex
+// Tag numbers are as follows: doughIndex, creamIndex, toppingIndex, price
 EXTERNAL leaveCounter()
 
 === Default1 ===
 # 2
 # 99
 # 99
+# 10
 A chocolate biscuit, please!
 + [Okay.]
     ~ leaveCounter()
@@ -23,6 +24,7 @@ A chocolate biscuit with nothing on it, please.
 # 1
 # 99
 # 99
+# 10
 I'd like a strawberry biscuit.
 + [Okay.]
     ~ leaveCounter()
@@ -41,6 +43,7 @@ A strawberry biscuit with nothing on it.
 # 0
 # 99
 # 99
+# 10
 Hi! A vanilla biscuit.
 + [Okay.]
     ~ leaveCounter()
@@ -59,6 +62,7 @@ Just a vanilla biscuit with nothing on it.
 # 2
 # 2
 # 3
+# 20
 All the chocolate you have, please!
 + [Okay.]
     ~ leaveCounter()
@@ -77,6 +81,7 @@ A chocolate biscuit with chocolate whipped cream and a chocolate on top.
 # 2
 # 0
 # 0
+# 18.5
 Could I have a chocolate biscuit with vanilla whipped cream and a strawberry on top?
 + [Okay.]
     ~ leaveCounter()
@@ -95,6 +100,7 @@ A chocolate biscuit with vanilla whipped cream and a strawberry on top.
 # 1
 # 99
 # 8
+# 15
 Hi! A strawberry biscuit with sprinkles!
 + [Okay.]
     ~ leaveCounter()
@@ -113,6 +119,7 @@ A strawberry biscuit with sprinkles on top.
 # 0
 # 2
 # 6
+# 17
 Hmmm...A white biscuit and brown whipped cream sounds good. Oh, and add some yellow syrup on top!
 + [Okay.]
     ~ leaveCounter()
@@ -131,6 +138,7 @@ A vanilla biscuit with chocolate whipped cream and honey.
 # 1
 # 0
 # 7
+# 17
 I want the strawberry biscuit with vanilla whipped cream. Drizzle some strawberry jam on it too!
 + [Okay.]
     ~ leaveCounter()
@@ -149,6 +157,7 @@ A strawberry biscuit with sprinkles on top.
 # 2
 # 99
 # 1
+# 13.5
 Everything's better with a cherry on top! A chocolate biscuit with a cherry, thank you!
 + [Okay.]
     ~ leaveCounter()
@@ -167,6 +176,7 @@ A chocolate biscuit with a cherry on top.
 # 2
 # 2
 # 2
+# 18.5
 I love banana-flavored chocolate milk, so I'd like a chocolate biscuit with chocolate whipped cream and a banana!
 + [Okay.]
     ~ leaveCounter()
@@ -185,6 +195,7 @@ A chocolate biscuit with chocolate whipped cream and a banana on top.
 # 0
 # 0
 # 4
+# 20
 A vanilla biscuit with vanilla whipped cream and caramel, please.
 + [Okay.]
     ~ leaveCounter()
@@ -203,6 +214,7 @@ A vanilla biscuit with vanilla whipped cream and a caramel on top.
 # 1
 # 0
 # 5
+# 18.5
 I'm craving some color today. A strawberry biscuit with vanilla whipped cream and blueberries will do!
 + [Okay.]
     ~ leaveCounter()

@@ -35,6 +35,7 @@ public class StrawBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (CanPlaceCream)
         {
             strawBottleOutline.SetActive(false);
+            GamestateManager.instance.ChangeMoney(-2.5f);
             EventManagerScript_Cooking2.instance.CreamAdded(1);
         }
     }

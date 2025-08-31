@@ -30,6 +30,7 @@ I've seen better.
 # 2
 # 2
 # 6
+# 17
 On my travels, I once saw a yellow river running down a brown mountain.
 + [Okay]
     ~ leaveCounter()
@@ -48,6 +49,7 @@ Pile the chocolate up high, then add yellow syrup.
 # 0
 # 99
 # 7
+# 12
 When I go hiking, I always pack bread and jam as a snack, but I forgot to this time. Could you make me something similar?
 + [Okay]
     ~ leaveCounter()
@@ -66,6 +68,7 @@ A vanilla biscuit with jam.
 # 2
 # 99
 # 4
+# 15
 When I visited a village up in the snowy North, the villagers and I shared mugs of hot chocolate flavored with caramel. Could you help me relive that warmth?
 + [Okay]
     ~ leaveCounter()

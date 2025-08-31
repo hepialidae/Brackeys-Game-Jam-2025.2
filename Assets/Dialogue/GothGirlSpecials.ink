@@ -30,6 +30,7 @@ Are you sure this is for me?
 # 1
 # 0
 # 8
+# 20
 My girlfriend really likes the color pink...a pink biscuit, white cream, and a crown of rainbow sprinkles would suit her well.
 + [Okay]
     ~ leaveCounter()
@@ -48,6 +49,7 @@ A strawberry biscuit with vanilla whipped cream and rainbow sprinkles.
 # 0
 # 0
 # 3
+# 20
 Contrasting colors can really make an accessory stand out, like dark chocolate on top of fluffy white clouds and a white biscuit.
 + [Okay]
     ~ leaveCounter()
@@ -66,6 +68,7 @@ A vanilla biscuit with vanilla whipped cream and a chocolate on top.
 # 2
 # 99
 # 5
+# 13.5
 I found a beautiful ring in a shop once - a gorgeous blue sapphire on top of a black band. Could you make me something similar?
 + [Okay]
     ~ leaveCounter()

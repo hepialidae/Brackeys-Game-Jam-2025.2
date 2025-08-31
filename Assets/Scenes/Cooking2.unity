@@ -536,6 +536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToppingScript
   toppingOutline: {fileID: 953050350}
   toppingIndex: 2
+  toppingPrice: 2.5
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!60 &137840006
@@ -806,6 +807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToppingScript
   toppingOutline: {fileID: 2132777177}
   toppingIndex: 8
+  toppingPrice: 3
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!60 &144958523
@@ -1123,6 +1125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToppingScript
   toppingOutline: {fileID: 1990159513}
   toppingIndex: 6
+  toppingPrice: 0.5
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!60 &257171102
@@ -1275,6 +1278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToppingScript
   toppingOutline: {fileID: 1672863869}
   toppingIndex: 1
+  toppingPrice: 2.5
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!60 &311868803
@@ -1494,6 +1498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToppingScript
   toppingOutline: {fileID: 1465419729}
   toppingIndex: 4
+  toppingPrice: 3
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!60 &393937765
@@ -1675,6 +1680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   toppingOutline: {fileID: 1529242372}
   toppingIndex: 0
+  toppingPrice: 2.5
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!60 &416957767
@@ -3597,6 +3603,7 @@ MonoBehaviour:
   orderDoughIndex: 99
   orderCreamIndex: 99
   orderToppingIndex: 99
+  orderPrice: 0
   playerDoughIndex: 2
   playerCookScore: 1
   playerCreamIndex: 99
@@ -3666,6 +3673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToppingScript
   toppingOutline: {fileID: 1867650947}
   toppingIndex: 3
+  toppingPrice: 3
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!60 &896962246
@@ -4013,6 +4021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToppingScript
   toppingOutline: {fileID: 695660914}
   toppingIndex: 5
+  toppingPrice: 2.5
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!50 &967604821
@@ -5931,6 +5940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToppingScript
   toppingOutline: {fileID: 1566106274}
   toppingIndex: 7
+  toppingPrice: 0.5
   CanAddTopping: 1
   WhippedCreamAdded: 0
 --- !u!60 &2103392184

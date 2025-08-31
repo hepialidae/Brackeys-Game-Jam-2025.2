@@ -30,6 +30,7 @@ Ah! Um...thank you...?
 # 0
 # 99
 # 99
+# 10
 People say I'm boring, but even "boring" things can be delicious! One vanilla biscuit, please!
 + [Okay]
     ~ leaveCounter()
@@ -48,6 +49,7 @@ Just a simple vanilla biscuit, please!
 # 0
 # 99
 # 0
+# 13.5
 Berries are the best! I want three of the same berry on my vanilla biscuit.
 + [Okay]
     ~ leaveCounter()
@@ -67,6 +69,7 @@ A vanilla biscuit with blueberries, please!
 # 1
 # 99
 # 6
+# 12
 I've been coding for too long...I need something sweet. How about a strawberry biscuit with honey on top?
 + [Okay]
     ~ leaveCounter()

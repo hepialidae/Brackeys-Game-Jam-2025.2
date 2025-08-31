@@ -13,7 +13,7 @@ Otherwise, you can say goodbye to your little biscuit shop.
 ~ startDay(1)
 -> END
 
-=== Day2Introduction ===
+=== Introduction2 ===
 Good morning.
 ...Oh, you have $100 already! 
 Wow, I really didn't expect this.
