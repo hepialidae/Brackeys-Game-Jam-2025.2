@@ -3597,8 +3597,8 @@ MonoBehaviour:
   orderDoughIndex: 99
   orderCreamIndex: 99
   orderToppingIndex: 99
-  playerDoughIndex: 99
-  playerCookScore: 99
+  playerDoughIndex: 2
+  playerCookScore: 1
   playerCreamIndex: 99
   playerToppingIndex: 99
 --- !u!4 &779500000
