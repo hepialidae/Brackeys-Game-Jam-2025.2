@@ -53,7 +53,7 @@ public class StoryManagerScript : MonoBehaviour
         demon.SetActive(false);
         fingerCanvas.SetActive(false);
         chopTimelineCanvas.SetActive(false);
-        
+
 
         EventManagerScript_Counter.instance.OnDayEnd.AddListener(RunDayEnd);
         EventManagerScript_Counter.instance.OnDayBegin.AddListener(Day1StoryEnd);
@@ -180,4 +180,6 @@ public class StoryManagerScript : MonoBehaviour
         landlordScript.PopUpAnim();
         DialogueManager.GetInstance().EnterDialogueMode(landlordJSON, "Introduction2");
     }
+    
+    // for days without landlord to start the day, invoke OnDayBegin yourself
 }
