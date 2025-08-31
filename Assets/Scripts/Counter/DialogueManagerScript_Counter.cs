@@ -117,7 +117,7 @@ public class DialogueManager : MonoBehaviour
 
         if (knotName.Contains("Day"))
         {
-            
+            BindDemons();
         }
 
         ContinueStory();
@@ -137,7 +137,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator LeaveCounter()
     {
         GamestateManager.instance.ChangeMoney(OrderTracker.instance.orderPrice);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.2f);
         SceneManager.LoadScene("Cooking1");
     }
 
@@ -148,7 +148,7 @@ public class DialogueManager : MonoBehaviour
             ExitDialogueMode();
             EventManagerScript_Counter.instance.ServeCustomer();
 
-            if (CustomerManagerScript.instance.customersVisited.Count == 5) // If change this number, change CustomerManagerScript
+            if (CustomerManagerScript.instance.customersVisited.Count == GamestateManager.instance.customersPerDay)
             {
                 EventManagerScript_Counter.instance.EndDay(GamestateManager.instance.day);
             }
@@ -169,6 +169,7 @@ public class DialogueManager : MonoBehaviour
         currentStory.BindExternalFunction("finger", () =>
         {
             ExitDialogueMode();
+            StoryManagerScript.instance.StartFinger();
         });
 
         currentStory.BindExternalFunction("end", () =>

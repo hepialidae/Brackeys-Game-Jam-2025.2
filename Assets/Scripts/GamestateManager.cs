@@ -7,6 +7,7 @@ public class GamestateManager : MonoBehaviour
     [Header("Game Variables")]
     public int day = 1;
     public float money = 0;
+    public int customersPerDay = 1;
 
     void Awake()
     {
@@ -24,5 +25,11 @@ public class GamestateManager : MonoBehaviour
     {
         money += amount;
         MoneyButtonScript.instance.RunMoneyChanged(amount);
+    }
+
+    public void NextDay()
+    {
+        day++;
+        // CustomerManagerScript.instance.StartSpawnCustomerFlow();
     }
 }

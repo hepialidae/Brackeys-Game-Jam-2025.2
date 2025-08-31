@@ -59,6 +59,7 @@ public class EventManagerScript_Counter : MonoBehaviour
     public IntEvent OnDayEnd;
     public void EndDay(int day)
     {
+        Debug.Log("OnDayEnd invoked. Day: " + day);
         OnDayEnd.Invoke(day);
     }
 }

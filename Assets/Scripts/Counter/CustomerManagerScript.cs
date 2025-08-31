@@ -23,6 +23,7 @@ public class CustomerManagerScript : MonoBehaviour
     void Start()
     {
         EventManagerScript_Counter.instance.OnDayBegin.AddListener(RunWaitWithInt);
+        EventManagerScript_Counter.instance.OnDayBegin.AddListener(StartCustomerFlow);
         EventManagerScript_Counter.instance.OnCustomerServed += RunWait;
     }
 
@@ -40,16 +41,19 @@ public class CustomerManagerScript : MonoBehaviour
         customersVisited.Add(randomCustomer);
         EventManagerScript_Counter.instance.SpawnRandomCustomer(randomCustomer);
 
-        if (customersVisited.Count == 5) // If change this number, change DialogueManagerScript_Counter line 138
+        if (customersVisited.Count == GamestateManager.instance.customersPerDay)
         {
             EventManagerScript_Counter.instance.OnCustomerServed -= RunWait;
         }
     }
 
-    public void StartSpawnCustomerFlow()
+    public void StartCustomerFlow(int num)
     {
-        customersVisited = new List<int> {};
-        EventManagerScript_Counter.instance.OnCustomerServed += RunWait;
+        customersVisited = new List<int> { };
+        if (GamestateManager.instance.day >= 2)
+        {
+            EventManagerScript_Counter.instance.OnCustomerServed += RunWait;
+        }
     }
 
     private void RunWait()
