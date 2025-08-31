@@ -90,6 +90,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
                     DialogueManager.GetInstance().EnterDialogueMode(specialOrders, $"Okay");
                     break;
                 case "Bad":
+                    GamestateManager.instance.ChangeMoney(-OrderTracker.instance.orderPrice);
                     DialogueManager.GetInstance().EnterDialogueMode(specialOrders, $"Bad");
                     break;
             }

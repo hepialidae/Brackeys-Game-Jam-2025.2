@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using System.Collections;
-using Unity.XR.GoogleVr;
 
 public class StoryManagerScript : MonoBehaviour
 {
@@ -20,10 +19,13 @@ public class StoryManagerScript : MonoBehaviour
     [SerializeField] private GameObject chopTimelineCanvas;
     [SerializeField] private PlayableDirector day2Director;
     [SerializeField] private GameObject day2TimelineCanvas;
+    [SerializeField] private PlayableDirector day3Director;
+    [SerializeField] private GameObject day3TimelineCanvas;
 
     [Header("Finger")]
     [SerializeField] private GameObject fingerCanvas;
     [SerializeField] public int fingerIndex = 0;
+    [SerializeField] private GameObject[] fingers;
 
     public static StoryManagerScript instance;
 
@@ -175,10 +177,51 @@ public class StoryManagerScript : MonoBehaviour
         demon.SetActive(false);
         day2TimelineCanvas.SetActive(false);
         GamestateManager.instance.NextDay();
+        float demonOwes = 100 - GamestateManager.instance.money;
+        GamestateManager.instance.ChangeMoney(demonOwes);
         landlord.SetActive(true);
         landlordScript.Appear();
         landlordScript.PopUpAnim();
         DialogueManager.GetInstance().EnterDialogueMode(landlordJSON, "Introduction2");
+    }
+
+    public void StartHand()
+    {
+        fingerCanvas.SetActive(true);
+        if (fingerIndex != 0)
+        {
+            fingers[fingerIndex - 1].SetActive(false);
+        }
+        else
+        {
+            Debug.Log("FingerIndex is 0 in StartHand()");
+        }
+    }
+
+    public void ChooseHand()
+    {
+        StartCoroutine(HandChosen());
+    }
+
+    private IEnumerator HandChosen()
+    {
+        fingerCanvas.SetActive(false);
+
+        chopTimelineCanvas.SetActive(true);
+        demonScript.Disappear();
+        demonScript.PopDownAnim();
+        chopDirector.Play();
+        yield return new WaitForSeconds(1f);
+
+        chopTimelineCanvas.SetActive(false);
+        day3TimelineCanvas.SetActive(true);
+        day3Director.Play();
+        yield return new WaitForSeconds(2.5f);
+
+        demon.SetActive(false);
+        day3TimelineCanvas.SetActive(false);
+        GamestateManager.instance.NextDay();
+        EventManagerScript_Counter.instance.StartDay(GamestateManager.instance.day);
     }
     
     // for days without landlord to start the day, invoke OnDayBegin yourself

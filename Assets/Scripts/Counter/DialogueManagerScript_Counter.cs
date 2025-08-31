@@ -180,6 +180,7 @@ public class DialogueManager : MonoBehaviour
         currentStory.BindExternalFunction("hand", () =>
         {
             ExitDialogueMode();
+            StoryManagerScript.instance.StartHand();
         });
 
         currentStory.BindExternalFunction("eye", () =>
