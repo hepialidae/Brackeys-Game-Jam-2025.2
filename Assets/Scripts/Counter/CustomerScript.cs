@@ -14,6 +14,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     [SerializeField] private Sprite mySprite;
     [SerializeField] private PolygonCollider2D _collider;
     [SerializeField] private GameObject customerOutline;
+    [SerializeField] private GameObject customerOutlineB;
     [SerializeField] private float yValue;
     private SpriteRenderer _renderer;
     private bool isVisible = false;
@@ -26,6 +27,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
         _collider = gameObject.GetComponent<PolygonCollider2D>();
 
         customerOutline.SetActive(false);
+        customerOutlineB.SetActive(false);
 
         EventManagerScript_Counter.instance.OnRandomCustomerSpawned.AddListener(Spawn);
         EventManagerScript_Counter.instance.OnBiscuitFinished.AddListener(BiscuitFinished);
@@ -79,6 +81,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
         if (seesOrder && isVisible)
         {
             customerOutline.SetActive(false);
+            customerOutlineB.SetActive(false);
             string score = OrderTracker.instance.CalculateScore();
             switch (score)
             {
@@ -101,7 +104,15 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     {
         if (seesOrder && isVisible)
         {
-            customerOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                customerOutline.SetActive(true);
+            }
+            else
+            {
+                customerOutlineB.SetActive(true);
+            }
+            
         }
     }
 
@@ -109,7 +120,14 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
     {
         if (seesOrder && isVisible)
         {
-            customerOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                customerOutline.SetActive(false);
+            }
+            else
+            {
+                customerOutlineB.SetActive(false);
+            }
         }
     }
 

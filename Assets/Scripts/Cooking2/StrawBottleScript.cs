@@ -4,11 +4,13 @@ using UnityEngine.EventSystems;
 public class StrawBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] GameObject strawBottleOutline;
+    [SerializeField] GameObject strawBottleOutlineB;
     private bool CanPlaceCream = true;
 
     void Start()
     {
         strawBottleOutline.SetActive(false);
+        strawBottleOutlineB.SetActive(false);
         CanPlaceCream = true;
 
         EventManagerScript_Cooking2.instance.OnCreamAdded.AddListener(CreamAdded);
@@ -18,7 +20,14 @@ public class StrawBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         if (CanPlaceCream)
         {
-            strawBottleOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                strawBottleOutline.SetActive(true);
+            }
+            else
+            {
+                strawBottleOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -26,7 +35,14 @@ public class StrawBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         if (CanPlaceCream)
         {
-            strawBottleOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                strawBottleOutline.SetActive(false);
+            }
+            else
+            {
+                strawBottleOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -35,6 +51,7 @@ public class StrawBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (CanPlaceCream)
         {
             strawBottleOutline.SetActive(false);
+            strawBottleOutlineB.SetActive(false);
             GamestateManager.instance.ChangeMoney(-2.5f);
             EventManagerScript_Cooking2.instance.CreamAdded(1);
         }

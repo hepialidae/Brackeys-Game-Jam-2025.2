@@ -186,11 +186,13 @@ public class DialogueManager : MonoBehaviour
         currentStory.BindExternalFunction("eye", () =>
         {
             ExitDialogueMode();
+            StoryManagerScript.instance.StartEye();
         });
 
         currentStory.BindExternalFunction("lifeforce", () =>
         {
             ExitDialogueMode();
+            StoryManagerScript.instance.StartLifeforce();
         });
     }
 

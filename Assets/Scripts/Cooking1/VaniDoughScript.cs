@@ -5,11 +5,13 @@ using UnityEngine.EventSystems;
 public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] GameObject vaniDoughOutline;
+    [SerializeField] GameObject vaniDoughOutlineB;
     private bool CanPlaceDough;
 
     void Start()
     {
         vaniDoughOutline.SetActive(false);
+        vaniDoughOutlineB.SetActive(false);
         CanPlaceDough = true;
         EventManagerScript.instance.OnDoughChosen.AddListener(DoughPlaced);
         EventManagerScript.instance.OnTrashPressed += Reset;
@@ -19,7 +21,14 @@ public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (CanPlaceDough)
         {
-            vaniDoughOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                vaniDoughOutline.SetActive(true);
+            }
+            else
+            {
+                vaniDoughOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -27,7 +36,14 @@ public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (CanPlaceDough)
         {
-            vaniDoughOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                vaniDoughOutline.SetActive(false);
+            }
+            else
+            {
+                vaniDoughOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -36,6 +52,7 @@ public class VaniDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (CanPlaceDough)
         {
             vaniDoughOutline.SetActive(false);
+            vaniDoughOutlineB.SetActive(false);
             GamestateManager.instance.ChangeMoney(-5);
             EventManagerScript.instance.ChooseDoughType(0);
         }

@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class DoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] GameObject doneButtonOutline;
+    [SerializeField] GameObject doneButtonOutlineB;
 
     private int creamIndex = 99;
     private int toppingIndex = 99;
@@ -11,6 +12,7 @@ public class DoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     void Start()
     {
         doneButtonOutline.SetActive(false);
+        doneButtonOutlineB.SetActive(false);
 
         EventManagerScript_Cooking2.instance.OnCreamAdded.AddListener(CreamAdded);
         EventManagerScript_Cooking2.instance.OnToppingAddedCream.AddListener(ToppingAdded);
@@ -19,12 +21,26 @@ public class DoneButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        doneButtonOutline.SetActive(true);
+        if (GamestateManager.instance.day <= 2)
+        {
+            doneButtonOutline.SetActive(true);
+        }
+        else
+        {
+            doneButtonOutlineB.SetActive(true);
+        }
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        doneButtonOutline.SetActive(false);
+        if (GamestateManager.instance.day <= 2)
+        {
+            doneButtonOutline.SetActive(false);
+        }
+        else
+        {
+            doneButtonOutlineB.SetActive(false);
+        }
     }
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)

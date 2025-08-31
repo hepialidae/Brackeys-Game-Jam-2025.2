@@ -5,11 +5,13 @@ using UnityEngine.EventSystems;
 public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] GameObject chocDoughOutline;
+    [SerializeField] GameObject chocDoughOutlineB;
     private bool CanPlaceDough;
 
     void Start()
     {
         chocDoughOutline.SetActive(false);
+        chocDoughOutlineB.SetActive(false);
         CanPlaceDough = true;
         EventManagerScript.instance.OnDoughChosen.AddListener(DoughPlaced);
         EventManagerScript.instance.OnTrashPressed += Reset;
@@ -19,7 +21,14 @@ public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (CanPlaceDough)
         {
-            chocDoughOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                chocDoughOutline.SetActive(true);
+            }
+            else
+            {
+                chocDoughOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -27,7 +36,14 @@ public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         if (CanPlaceDough)
         {
-            chocDoughOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                chocDoughOutline.SetActive(false);
+            }
+            else
+            {
+                chocDoughOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -36,6 +52,7 @@ public class ChocDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExit
         if (CanPlaceDough)
         {
             chocDoughOutline.SetActive(false);
+            chocDoughOutlineB.SetActive(false);
             GamestateManager.instance.ChangeMoney(-5);
             EventManagerScript.instance.ChooseDoughType(2);
         }

@@ -6,6 +6,7 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 {
     [Header("Oven Variants")]
     [SerializeField] GameObject ovenOutline;
+    [SerializeField] GameObject ovenOutlineB;
     [SerializeField] GameObject ovenWithBiscuit;
 
     [Header("Cooking Bar Functionality")]
@@ -17,6 +18,7 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     void Start()
     {
         ovenOutline.SetActive(false);
+        ovenOutlineB.SetActive(false);
         EventManagerScript.instance.OnDoughChosen.AddListener(DoughChosen);
         EventManagerScript.instance.OnTrashPressed += Reset;
     }
@@ -25,7 +27,14 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (CanBake)
         {
-            ovenOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                ovenOutline.SetActive(true);
+            }
+            else
+            {
+                ovenOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -33,7 +42,14 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (CanBake)
         {
-            ovenOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                ovenOutline.SetActive(false);
+            }
+            else
+            {
+                ovenOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -47,6 +63,7 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (cookingBarVertScript.BarMoving == false && CanBake == true)
         {
             ovenOutline.SetActive(false);
+            ovenOutlineB.SetActive(false);
             EventManagerScript.instance.BakeDough();
             cookingBar.SetActive(true);
             cookingBarVert.SetActive(true);
@@ -59,6 +76,7 @@ public class OvenScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     private void Reset()
     {
         ovenOutline.SetActive(false);
+        ovenOutlineB.SetActive(false);
         CanBake = false;
     }
 }

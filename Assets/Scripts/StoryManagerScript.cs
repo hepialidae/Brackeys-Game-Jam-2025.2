@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using System.Collections;
+using System.Security.Cryptography;
 
 public class StoryManagerScript : MonoBehaviour
 {
@@ -21,11 +22,19 @@ public class StoryManagerScript : MonoBehaviour
     [SerializeField] private GameObject day2TimelineCanvas;
     [SerializeField] private PlayableDirector day3Director;
     [SerializeField] private GameObject day3TimelineCanvas;
+    [SerializeField] private PlayableDirector day4Director;
+    [SerializeField] private GameObject day4TimelineCanvas;
 
     [Header("Finger")]
     [SerializeField] private GameObject fingerCanvas;
     [SerializeField] public int fingerIndex = 0;
     [SerializeField] private GameObject[] fingers;
+
+    [Header("Eye")]
+    [SerializeField] private GameObject eyeCanvas;
+    [Header("Lifeforce")]
+    [SerializeField] private GameObject jumpscare;
+    [SerializeField] private GameObject end;
 
     public static StoryManagerScript instance;
 
@@ -41,8 +50,13 @@ public class StoryManagerScript : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(day1TimelineCanvas);
         DontDestroyOnLoad(day2TimelineCanvas);
+        DontDestroyOnLoad(day3TimelineCanvas);
+        DontDestroyOnLoad(day4TimelineCanvas);
         DontDestroyOnLoad(chopTimelineCanvas);
         DontDestroyOnLoad(fingerCanvas);
+        DontDestroyOnLoad(eyeCanvas);
+        DontDestroyOnLoad(jumpscare);
+        DontDestroyOnLoad(end);
     }
 
     void Start()
@@ -55,6 +69,12 @@ public class StoryManagerScript : MonoBehaviour
         demon.SetActive(false);
         fingerCanvas.SetActive(false);
         chopTimelineCanvas.SetActive(false);
+        eyeCanvas.SetActive(false);
+        day2TimelineCanvas.SetActive(false);
+        day3TimelineCanvas.SetActive(false);
+        day4TimelineCanvas.SetActive(false);
+        jumpscare.SetActive(false);
+        end.SetActive(false);
 
 
         EventManagerScript_Counter.instance.OnDayEnd.AddListener(RunDayEnd);
@@ -223,6 +243,47 @@ public class StoryManagerScript : MonoBehaviour
         GamestateManager.instance.NextDay();
         EventManagerScript_Counter.instance.StartDay(GamestateManager.instance.day);
     }
-    
+
+    public void StartEye()
+    {
+        eyeCanvas.SetActive(true);
+    }
+
+    public void ChooseEye()
+    {
+        StartCoroutine(EyeChosen());
+    }
+
+    private IEnumerator EyeChosen()
+    {
+        eyeCanvas.SetActive(true);
+
+        chopTimelineCanvas.SetActive(true);
+        demonScript.Disappear();
+        demonScript.PopDownAnim();
+        chopDirector.Play();
+        yield return new WaitForSeconds(1f);
+
+        chopTimelineCanvas.SetActive(false);
+        day4TimelineCanvas.SetActive(true);
+        day4Director.Play();
+        yield return new WaitForSeconds(2.5f);
+
+        demon.SetActive(false);
+        day4TimelineCanvas.SetActive(false);
+        GamestateManager.instance.NextDay();
+        EventManagerScript_Counter.instance.StartDay(GamestateManager.instance.day);
+    }
+
+    public void StartLifeforce()
+    {
+        jumpscare.SetActive(true);
+    }
+
+    public void End()
+    {
+        end.SetActive(true);
+    }
+
     // for days without landlord to start the day, invoke OnDayBegin yourself
 }

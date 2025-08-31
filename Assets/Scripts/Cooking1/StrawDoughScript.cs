@@ -5,11 +5,13 @@ using UnityEngine.EventSystems;
 public class StrawDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] GameObject strawDoughOutline;
+    [SerializeField] GameObject strawDoughOutlineB;
     private bool CanPlaceDough;
 
     void Start()
     {
         strawDoughOutline.SetActive(false);
+        strawDoughOutlineB.SetActive(false);
         CanPlaceDough = true;
         EventManagerScript.instance.OnDoughChosen.AddListener(DoughPlaced);
         EventManagerScript.instance.OnTrashPressed += Reset;
@@ -19,7 +21,14 @@ public class StrawDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (CanPlaceDough)
         {
-            strawDoughOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                strawDoughOutline.SetActive(true);
+            }
+            else
+            {
+                strawDoughOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -27,7 +36,14 @@ public class StrawDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (CanPlaceDough)
         {
-            strawDoughOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                strawDoughOutline.SetActive(false);
+            }
+            else
+            {
+                strawDoughOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -36,6 +52,7 @@ public class StrawDoughScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (CanPlaceDough)
         {
             strawDoughOutline.SetActive(false);
+            strawDoughOutlineB.SetActive(false);
             GamestateManager.instance.ChangeMoney(-5);
             EventManagerScript.instance.ChooseDoughType(1);
         }

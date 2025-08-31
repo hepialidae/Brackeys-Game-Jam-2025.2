@@ -6,6 +6,7 @@ public class ToppingScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 {
     [Header("Topping Features")]
     [SerializeField] GameObject toppingOutline;
+    [SerializeField] GameObject toppingOutlineB;
     [SerializeField] private int toppingIndex;
     [SerializeField] private float toppingPrice;
 
@@ -16,6 +17,7 @@ public class ToppingScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     void Start()
     {
         toppingOutline.SetActive(false);
+        toppingOutlineB.SetActive(false);
 
         EventManagerScript_Cooking2.instance.OnCreamAdded.AddListener(CreamAdded);
         EventManagerScript_Cooking2.instance.OnToppingAddedCream.AddListener(ToppingAdded);
@@ -26,7 +28,14 @@ public class ToppingScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (CanAddTopping)
         {
-            toppingOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                toppingOutline.SetActive(true);
+            }
+            else
+            {
+                toppingOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -34,7 +43,14 @@ public class ToppingScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         if (CanAddTopping)
         {
-            toppingOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                toppingOutline.SetActive(false);
+            }
+            else
+            {
+                toppingOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -43,6 +59,7 @@ public class ToppingScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (CanAddTopping)
         {
             toppingOutline.SetActive(false);
+            toppingOutlineB.SetActive(false);
             GamestateManager.instance.ChangeMoney(-toppingPrice);
 
             if (WhippedCreamAdded)

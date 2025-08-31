@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class TrashButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] GameObject trashButtonOutline;
+    [SerializeField] GameObject trashButtonOutlineB;
     [SerializeField] Sprite trash;
     private SpriteRenderer _renderer;
     private bool isVisible;
@@ -19,13 +20,21 @@ public class TrashButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
         Disappear();
         trashButtonOutline.SetActive(false);
+        trashButtonOutlineB.SetActive(false);
     }
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
         if (isVisible)
         {
-            trashButtonOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                trashButtonOutline.SetActive(true);
+            }
+            else
+            {
+                trashButtonOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -33,7 +42,14 @@ public class TrashButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         if (isVisible)
         {
-            trashButtonOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                trashButtonOutline.SetActive(false);
+            }
+            else
+            {
+                trashButtonOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -42,6 +58,7 @@ public class TrashButtonScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (isVisible)
         {
             trashButtonOutline.SetActive(false);
+            trashButtonOutlineB.SetActive(false);
             EventManagerScript.instance.TrashPressed();
         }
     }

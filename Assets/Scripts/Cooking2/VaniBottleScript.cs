@@ -5,11 +5,13 @@ using UnityEngine.EventSystems;
 public class VaniBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] GameObject vaniBottleOutline;
+    [SerializeField] GameObject vaniBottleOutlineB;
     private bool CanPlaceCream = true;
 
     void Start()
     {
         vaniBottleOutline.SetActive(false);
+        vaniBottleOutlineB.SetActive(false);
         CanPlaceCream = true;
 
         EventManagerScript_Cooking2.instance.OnCreamAdded.AddListener(CreamAdded);
@@ -19,7 +21,14 @@ public class VaniBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (CanPlaceCream)
         {
-            vaniBottleOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                vaniBottleOutline.SetActive(true);
+            }
+            else
+            {
+                vaniBottleOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -27,7 +36,14 @@ public class VaniBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (CanPlaceCream)
         {
-            vaniBottleOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                vaniBottleOutline.SetActive(false);
+            }
+            else
+            {
+                vaniBottleOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -36,6 +52,7 @@ public class VaniBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (CanPlaceCream)
         {
             vaniBottleOutline.SetActive(false);
+            vaniBottleOutlineB.SetActive(false);
             GamestateManager.instance.ChangeMoney(-2.5f);
             EventManagerScript_Cooking2.instance.CreamAdded(0);
         }

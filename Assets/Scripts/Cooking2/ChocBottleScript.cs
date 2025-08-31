@@ -4,11 +4,13 @@ using UnityEngine.EventSystems;
 public class ChocBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] GameObject chocBottleOutline;
+    [SerializeField] GameObject chocBottleOutlineB;
     private bool CanPlaceCream = true;
 
     void Start()
     {
         chocBottleOutline.SetActive(false);
+        chocBottleOutlineB.SetActive(false);
         CanPlaceCream = true;
 
         EventManagerScript_Cooking2.instance.OnCreamAdded.AddListener(CreamAdded);
@@ -18,7 +20,14 @@ public class ChocBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (CanPlaceCream)
         {
-            chocBottleOutline.SetActive(true);
+            if (GamestateManager.instance.day <= 2)
+            {
+                chocBottleOutline.SetActive(true);
+            }
+            else
+            {
+                chocBottleOutlineB.SetActive(true);
+            }
         }
     }
 
@@ -26,7 +35,14 @@ public class ChocBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (CanPlaceCream)
         {
-            chocBottleOutline.SetActive(false);
+            if (GamestateManager.instance.day <= 2)
+            {
+                chocBottleOutline.SetActive(false);
+            }
+            else
+            {
+                chocBottleOutlineB.SetActive(false);
+            }
         }
     }
 
@@ -35,6 +51,7 @@ public class ChocBottleScript : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (CanPlaceCream)
         {
             chocBottleOutline.SetActive(false);
+            chocBottleOutlineB.SetActive(false);
             GamestateManager.instance.ChangeMoney(-2.5f);
             EventManagerScript_Cooking2.instance.CreamAdded(2);
         }
