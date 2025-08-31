@@ -29,10 +29,10 @@ public class CustomerManagerScript : MonoBehaviour
 
     private void SpawnRandomCustomer()
     {
-        int randomCustomer = Random.Range(0, 5);
+        int randomCustomer = Random.Range(0, 6);
         while (customersVisited.Contains(randomCustomer))
         {
-            randomCustomer = Random.Range(0, 5);
+            randomCustomer = Random.Range(0, 6);
         }
 
         Debug.Log("Spawning customer: " + randomCustomer);

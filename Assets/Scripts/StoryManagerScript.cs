@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using System.Collections;
-using System.Security.Cryptography;
 
 public class StoryManagerScript : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class StoryManagerScript : MonoBehaviour
     [SerializeField] private GameObject demon;
     private StoryCharacterScript landlordScript;
     private StoryCharacterScript demonScript;
+    private int debt = 0;
 
     [Header("Timelines")]
     [SerializeField] private PlayableDirector day1Director;
@@ -32,9 +32,11 @@ public class StoryManagerScript : MonoBehaviour
 
     [Header("Eye")]
     [SerializeField] private GameObject eyeCanvas;
+
     [Header("Lifeforce")]
     [SerializeField] private GameObject jumpscare;
     [SerializeField] private GameObject end;
+    [SerializeField] private GameObject frame;
 
     public static StoryManagerScript instance;
 
@@ -57,6 +59,7 @@ public class StoryManagerScript : MonoBehaviour
         DontDestroyOnLoad(eyeCanvas);
         DontDestroyOnLoad(jumpscare);
         DontDestroyOnLoad(end);
+        DontDestroyOnLoad(frame);
     }
 
     void Start()
@@ -75,6 +78,7 @@ public class StoryManagerScript : MonoBehaviour
         day4TimelineCanvas.SetActive(false);
         jumpscare.SetActive(false);
         end.SetActive(false);
+        frame.SetActive(false);
 
 
         EventManagerScript_Counter.instance.OnDayEnd.AddListener(RunDayEnd);
@@ -112,11 +116,13 @@ public class StoryManagerScript : MonoBehaviour
     {
         day1TimelineCanvas.SetActive(true);
         day1Director.Play();
-        yield return new WaitForSeconds(2.6f);
+        yield return new WaitForSeconds(4.1f);
+        AudioManager.instance.Play(AudioManager.instance.day1);
         day1TimelineCanvas.SetActive(false);
         landlord.SetActive(true);
         landlordScript.Appear();
         landlordScript.PopUpAnim();
+        yield return new WaitForSeconds(0.3f);
         DialogueManager.GetInstance().EnterDialogueMode(landlordJSON, "Introduction");
     }
 
@@ -138,7 +144,12 @@ public class StoryManagerScript : MonoBehaviour
 
     private IEnumerator DayEnd(int dayNum)
     {
+        AudioManager.instance.FadeOut(AudioManager.instance.day1, 0.7f);
+        AudioManager.instance.FadeOut(AudioManager.instance.day2, 0.7f);
+        AudioManager.instance.FadeOut(AudioManager.instance.day3, 0.7f);
+        AudioManager.instance.FadeOut(AudioManager.instance.day4, 0.7f);
         yield return new WaitForSeconds(0.7f);
+        AudioManager.instance.Play(AudioManager.instance.demonTheme);
         demon.SetActive(true);
         demonScript.Appear();
         demonScript.PopUpAnim();
@@ -175,6 +186,7 @@ public class StoryManagerScript : MonoBehaviour
 
     public void ChooseFinger(int finger)
     {
+        AudioManager.instance.FadeOut(AudioManager.instance.demonTheme, 0.1f);
         StartCoroutine(FingerChosen(finger));
     }
 
@@ -192,16 +204,36 @@ public class StoryManagerScript : MonoBehaviour
         chopTimelineCanvas.SetActive(false);
         day2TimelineCanvas.SetActive(true);
         day2Director.Play();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4.1f);
 
         demon.SetActive(false);
         day2TimelineCanvas.SetActive(false);
+        AudioManager.instance.Play(AudioManager.instance.day2);
         GamestateManager.instance.NextDay();
         float demonOwes = 100 - GamestateManager.instance.money;
         GamestateManager.instance.ChangeMoney(demonOwes);
         landlord.SetActive(true);
         landlordScript.Appear();
         landlordScript.PopUpAnim();
+        yield return new WaitForSeconds(0.3f);
+        DialogueManager.GetInstance().EnterDialogueMode(landlordJSON, "Introduction2");
+    }
+
+    public IEnumerator NormalEnd1()
+    {
+        day2TimelineCanvas.SetActive(true);
+        day2Director.Play();
+        yield return new WaitForSeconds(4.1f);
+
+        demon.SetActive(false);
+        day2TimelineCanvas.SetActive(false);
+        AudioManager.instance.Play(AudioManager.instance.day2);
+        GamestateManager.instance.NextDay();
+        debt += 100;
+        landlord.SetActive(true);
+        landlordScript.Appear();
+        landlordScript.PopUpAnim();
+        yield return new WaitForSeconds(0.3f);
         DialogueManager.GetInstance().EnterDialogueMode(landlordJSON, "Introduction2");
     }
 
@@ -220,6 +252,7 @@ public class StoryManagerScript : MonoBehaviour
 
     public void ChooseHand()
     {
+        AudioManager.instance.FadeOut(AudioManager.instance.demonTheme, 0.1f);
         StartCoroutine(HandChosen());
     }
 
@@ -236,11 +269,28 @@ public class StoryManagerScript : MonoBehaviour
         chopTimelineCanvas.SetActive(false);
         day3TimelineCanvas.SetActive(true);
         day3Director.Play();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4.1f);
 
         demon.SetActive(false);
         day3TimelineCanvas.SetActive(false);
+        AudioManager.instance.Play(AudioManager.instance.day3);
         GamestateManager.instance.NextDay();
+        float demonOwes = 200 - debt - GamestateManager.instance.money;
+        GamestateManager.instance.ChangeMoney(demonOwes);
+        EventManagerScript_Counter.instance.StartDay(GamestateManager.instance.day);
+    }
+
+    public IEnumerator NormalEnd2()
+    {
+        day3TimelineCanvas.SetActive(true);
+        day3Director.Play();
+        yield return new WaitForSeconds(4.1f);
+
+        demon.SetActive(false);
+        day3TimelineCanvas.SetActive(false);
+        AudioManager.instance.Play(AudioManager.instance.day3);
+        GamestateManager.instance.NextDay();
+        debt += 100;
         EventManagerScript_Counter.instance.StartDay(GamestateManager.instance.day);
     }
 
@@ -251,12 +301,13 @@ public class StoryManagerScript : MonoBehaviour
 
     public void ChooseEye()
     {
+        AudioManager.instance.FadeOut(AudioManager.instance.demonTheme, 0.1f);
         StartCoroutine(EyeChosen());
     }
 
     private IEnumerator EyeChosen()
     {
-        eyeCanvas.SetActive(true);
+        eyeCanvas.SetActive(false);
 
         chopTimelineCanvas.SetActive(true);
         demonScript.Disappear();
@@ -267,21 +318,44 @@ public class StoryManagerScript : MonoBehaviour
         chopTimelineCanvas.SetActive(false);
         day4TimelineCanvas.SetActive(true);
         day4Director.Play();
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4.1f);
 
         demon.SetActive(false);
         day4TimelineCanvas.SetActive(false);
+        AudioManager.instance.Play(AudioManager.instance.day4);
         GamestateManager.instance.NextDay();
+        frame.SetActive(true);
+        float demonOwes = 300 - debt - GamestateManager.instance.money;
+        GamestateManager.instance.ChangeMoney(demonOwes);
+        EventManagerScript_Counter.instance.StartDay(GamestateManager.instance.day);
+    }
+
+    public IEnumerator NormalEnd3()
+    {
+        day4TimelineCanvas.SetActive(true);
+        day4Director.Play();
+        yield return new WaitForSeconds(4.1f);
+
+        demon.SetActive(false);
+        day4TimelineCanvas.SetActive(false);
+        AudioManager.instance.Play(AudioManager.instance.day4);
+        GamestateManager.instance.NextDay();
+        frame.SetActive(true);
+        debt += 100;
         EventManagerScript_Counter.instance.StartDay(GamestateManager.instance.day);
     }
 
     public void StartLifeforce()
     {
+        frame.SetActive(false);
+        AudioManager.instance.FadeOut(AudioManager.instance.demonTheme, 0.1f);
         jumpscare.SetActive(true);
     }
 
     public void End()
     {
+        frame.SetActive(false);
+        AudioManager.instance.FadeOut(AudioManager.instance.demonTheme, 0.1f);
         end.SetActive(true);
     }
 

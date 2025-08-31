@@ -115,7 +115,7 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
---- !u!114 &533504861094538925
+--- !u!114 &909602190926370002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.AudioPlayableAsset
-  m_Clip: {fileID: 8300000, guid: ca89908ec2c4c43978340df366d2a6c0, type: 3}
+  m_Clip: {fileID: 8300000, guid: bec559c17a174478c8f85226680060da, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
@@ -155,9 +155,9 @@ MonoBehaviour:
   m_Clips:
   - m_Version: 1
     m_Start: 0
-    m_ClipIn: 0.06666666666666667
-    m_Asset: {fileID: 533504861094538925}
-    m_Duration: 0.37741496598639457
+    m_ClipIn: 0.03333333333333333
+    m_Asset: {fileID: 909602190926370002}
+    m_Duration: 0.9666666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1132310271039915149}
     m_EaseInDuration: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: KnifeChop
+    m_DisplayName: very-loud-splat-88998
   m_Markers:
     m_Objects: []
   m_TrackProperties:

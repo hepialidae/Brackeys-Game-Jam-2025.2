@@ -12,16 +12,25 @@ public class HandScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        outline.SetActive(true);
+        if (StoryManagerScript.instance.fingerIndex != 0)
+        {
+            outline.SetActive(true);
+        }
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        outline.SetActive(false);
+        if (StoryManagerScript.instance.fingerIndex != 0)
+        {
+            outline.SetActive(false);
+        }
     }
 
     public void OnClick()
     {
-        StoryManagerScript.instance.ChooseHand();
+        if (StoryManagerScript.instance.fingerIndex != 0)
+        {
+            StoryManagerScript.instance.ChooseHand();
+        }
     }
 }

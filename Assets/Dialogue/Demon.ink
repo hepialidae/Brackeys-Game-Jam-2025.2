@@ -1,8 +1,11 @@
 EXTERNAL finger()
-EXTERNAL end()
 EXTERNAL hand()
 EXTERNAL eye()
 EXTERNAL lifeforce()
+EXTERNAL end1()
+EXTERNAL end2()
+EXTERNAL end3()
+EXTERNAL end4()
 
 === Day1 ===
 Oh, hello, friend.
@@ -40,7 +43,7 @@ Here, I'll even let you choose which one.
     -> END
 + [No.]
     Well, I can't stop you.
-    ~ end()
+    ~ end1()
     -> END
 
 === Day2 ===
@@ -73,7 +76,7 @@ Won't you lend me a helping hand?
     -> END
 + [No.]
     Well, I can't stop you.
-    ~ end()
+    ~ end2()
     -> END
 -> END
 
@@ -115,7 +118,7 @@ What do you say? I'll give you the usual, of course.
     -> END
 + [No.]
     Well, I can't stop you.
-    ~ end()
+    ~ end3()
     -> END
 -> END
 
@@ -166,6 +169,6 @@ Please. I need this.
     -> END
 + [Never.]
     You've doomed me.
-    ~ end()
+    ~ end4()
     -> END
 -> END

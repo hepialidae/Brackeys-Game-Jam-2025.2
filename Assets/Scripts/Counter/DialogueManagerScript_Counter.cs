@@ -172,11 +172,6 @@ public class DialogueManager : MonoBehaviour
             StoryManagerScript.instance.StartFinger();
         });
 
-        currentStory.BindExternalFunction("end", () =>
-        {
-            ExitDialogueMode();
-        });
-
         currentStory.BindExternalFunction("hand", () =>
         {
             ExitDialogueMode();
@@ -193,6 +188,30 @@ public class DialogueManager : MonoBehaviour
         {
             ExitDialogueMode();
             StoryManagerScript.instance.StartLifeforce();
+        });
+
+        currentStory.BindExternalFunction("end1", () =>
+        {
+            ExitDialogueMode();
+            StartCoroutine(StoryManagerScript.instance.NormalEnd1());
+        });
+
+        currentStory.BindExternalFunction("end2", () =>
+        {
+            ExitDialogueMode();
+            StartCoroutine(StoryManagerScript.instance.NormalEnd2());
+        });
+
+        currentStory.BindExternalFunction("end3", () =>
+        {
+            ExitDialogueMode();
+            StartCoroutine(StoryManagerScript.instance.NormalEnd3());
+        });
+
+        currentStory.BindExternalFunction("end4", () =>
+        {
+            ExitDialogueMode();
+            StoryManagerScript.instance.End();
         });
     }
 

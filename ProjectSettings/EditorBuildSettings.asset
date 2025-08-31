@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: ff95fcff70fc44d01970af68687d9c70
+  - enabled: 1
     path: Assets/Scenes/Counter.unity
-    guid: 54eb2ab31e8ce41d39b069078b6dbfc7
+    guid: 079236f65e3044dfaad9ce1a7204d6d4
   - enabled: 1
     path: Assets/Scenes/Cooking1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
