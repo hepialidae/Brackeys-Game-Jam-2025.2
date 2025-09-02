@@ -87,6 +87,7 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
             {
                 case "Good":
                     int index = Random.Range(1, 4);
+                    GamestateManager.instance.ChangeMoney(5);
                     DialogueManager.GetInstance().EnterDialogueMode(specialOrders, $"Good{index}");
                     break;
                 case "Okay":
@@ -195,6 +196,18 @@ public class CustomerScript : MonoBehaviour, IPointerClickHandler, IPointerEnter
             case 4:
                 int orderNum3 = Random.Range(1, 4);
                 return $"Special{orderNum3}";
+            case 5:
+                int probabilityNum4 = Random.Range(1, 11);
+                if (probabilityNum4 <= 3) // 30% chance for special order
+                {
+                    int orderNum2 = Random.Range(1, 4);
+                    return $"Special{orderNum2}";
+                }
+                else
+                {
+                    int orderNum2 = Random.Range(1, 13);
+                    return $"Default{orderNum2}";
+                }
             default:
                 Debug.Log("Day is something other than 1-4. Day: " + day);
                 return "Default1";

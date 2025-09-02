@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 using System.Collections;
+using TMPro;
 
 public class StoryManagerScript : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class StoryManagerScript : MonoBehaviour
     [SerializeField] private GameObject jumpscare;
     [SerializeField] private GameObject end;
     [SerializeField] private GameObject frame;
-
+    [SerializeField] private GameObject apology;
     public static StoryManagerScript instance;
 
     void Awake()
@@ -60,6 +61,7 @@ public class StoryManagerScript : MonoBehaviour
         DontDestroyOnLoad(jumpscare);
         DontDestroyOnLoad(end);
         DontDestroyOnLoad(frame);
+        DontDestroyOnLoad(apology);
     }
 
     void Start()
@@ -79,6 +81,7 @@ public class StoryManagerScript : MonoBehaviour
         jumpscare.SetActive(false);
         end.SetActive(false);
         frame.SetActive(false);
+        apology.SetActive(false);
 
 
         EventManagerScript_Counter.instance.OnDayEnd.AddListener(RunDayEnd);
@@ -350,6 +353,13 @@ public class StoryManagerScript : MonoBehaviour
         frame.SetActive(false);
         AudioManager.instance.FadeOut(AudioManager.instance.demonTheme, 0.1f);
         jumpscare.SetActive(true);
+        StartCoroutine(EndlessOption());
+    }
+
+    private IEnumerator EndlessOption()
+    {
+        yield return new WaitForSeconds(2f);
+        apology.SetActive(true);
     }
 
     public void End()
@@ -357,6 +367,15 @@ public class StoryManagerScript : MonoBehaviour
         frame.SetActive(false);
         AudioManager.instance.FadeOut(AudioManager.instance.demonTheme, 0.1f);
         end.SetActive(true);
+    }
+
+    public void StartEndless()
+    {
+        demon.SetActive(false);
+        apology.SetActive(false);
+        jumpscare.SetActive(false);
+        GamestateManager.instance.NextDay();
+        EventManagerScript_Counter.instance.StartDay(GamestateManager.instance.day);
     }
 
     // for days without landlord to start the day, invoke OnDayBegin yourself

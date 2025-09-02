@@ -63,6 +63,9 @@ public class MoneyButtonScript : MonoBehaviour, IPointerClickHandler, IPointerEn
             case 4:
                 dailyGoal = 400f;
                 break;
+            case 5:
+                dailyGoal = 0f;
+                break;
             default:
                 Debug.LogWarning("Day is something other than 1-4. Day: " + GamestateManager.instance.day);
                 break;

@@ -2,6 +2,7 @@ using System.Linq;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.GoogleVr;
 
 public class CustomerManagerScript : MonoBehaviour
 {
@@ -38,7 +39,12 @@ public class CustomerManagerScript : MonoBehaviour
         Debug.Log("Spawning customer: " + randomCustomer);
 
         OrderTracker.instance.customerIndex = randomCustomer;
-        customersVisited.Add(randomCustomer);
+
+        if (GamestateManager.instance.day <= 4)
+        {
+            customersVisited.Add(randomCustomer);
+        }
+        
         EventManagerScript_Counter.instance.SpawnRandomCustomer(randomCustomer);
 
         if (customersVisited.Count == GamestateManager.instance.customersPerDay)

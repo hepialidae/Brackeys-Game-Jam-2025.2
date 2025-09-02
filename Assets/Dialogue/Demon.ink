@@ -148,7 +148,7 @@ Please. I need this.
     Wow. # red
     You humans...sure have a lot of empathy.
     I can't believe that worked on you!
-    Enjoy your five years!
+    Enjoy your five years! # normal
     ~ lifeforce()
     -> END
 + [No!]
@@ -164,7 +164,7 @@ Please. I need this.
     Wow. # red
     I can't believe that worked on you!
     You humans sure are foolish.
-    Enjoy your five years!
+    Enjoy your five years! # normal
     ~ lifeforce()
     -> END
 + [Never.]
